@@ -1,0 +1,151 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{titlesec} %za renewcommand
+\usepackage{titling} %za renewcommand
+\usepackage{ragged2e} %za na pr. flushleft
+\usepackage{fancyhdr}
+
+\setcounter{page}{0}
+\setcounter{section}{-1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{Powerd by \LaTeX}
+\cfoot{Verzija: 0.0.0.0}
+\rfoot{Strana: \thepage}
+
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\renewcommand{\maketitle}{
+	\begin{center}
+	{\huge\bfseries
+	\thetitle}
+	\end{center}
+
+	\vspace{1cm}
+
+	\centerline{\textbf{Naročnik: Šaj d.o.o.}}
+	\centerline{\textbf{Vodja projekta: Anton Zhezhov}}
+
+	\vspace{1cm}
+
+	\leftline{\textbf{Začetek: 09.10.2019 } \hfill \textbf{Konec: 00.00.2020}}
+
+	\vspace{4cm}
+
+	\begin{center}
+	
+			\begin{tabular}{c|c|c|c}
+					Ime in Priimek&Vloga	  &e - Naslov						&Opomba\\
+				\hline
+					Anton Zhezhov &Preverjanje&anton.zhezhov@student.um.si & 		\\
+				\hline
+					Žiga Zorc	  &Razvoj	  &ziga.zorc@student.um.si 	   &		\\
+			\end{tabular}
+	
+	\end{center}
+}
+
+\let\oldtitleline\titleline
+\renewcommand{\titleline}{\oldtitleline*}
+
+\title{Projekt CSUPP}
+\author{Anton Zhezhov}
+
+
+\begin{document}
+
+\maketitle
+
+\setlength{\titlewidth}{16cm}
+
+\newpage
+
+\section{Naročnikove zahteve}
+	\subsection{Splošne informacije}
+			\begin{center}
+				\begin{tabular}{c|c}
+						Dokument & Verzija 1.0 \\
+						\hline
+						Naročnik & Šaj d.o.o. \\
+						\hline
+						Lokacija dokumenta & link \\
+						\hline
+						Odgovorna oseba & Direktor podetja Šaj d.o.o. \\
+				\end{tabular}
+			\end{center}
+	\subsection{Zahteve}
+ 
+	\hspace{1em} V podjetju Šaj d.o.o. se ukvarjamo z razvojem inovativnih rešitev na področju 
+	avtomatizacije in digitalizacije upravljanja poslovnih prostorov. Pri načrtovanju 
+	naših rešitev dajemo velik poudarek na okoljsko trajnost, energetsko učinkovitost 
+	ter ergonomičnost produktov, saj se zavedamo, da omenjene lastnosti pozitivno vplivajo 
+	tako na izboljšano uporabniško izkušnjo kot na optimizacijo poslovanja skozi nižanje 
+	stroškov.
+	
+	V podjetju smo prepoznali pomanjkanje rešitev, ki bi celovito naslovile 
+	problem zastarelosti poslovnih prostorov. V ta namen načrtujemo razvoj centralnega 
+	sistema za upravljanje poslovnega prostora, s čimer se nadejamo preboja na trg 
+	in s tem izboljšanja poslovnega uspeha. Projekt že ima izoblikovano idejno zasnovo, 
+	in sicer tako glede strojne opreme kot izgleda in funkcionalnosti. Sedaj smo v fazi 
+	iskanja resnega partnerja, ki bi prevzel razvoj programske opreme. Ker želimo preveriti 
+	osnovni koncept in delovanje centralnega sistema za upravljanje prostora, naj bo program 
+	napisan v obliki simulatorja. Najprej potrebujemo preprost simulator brez grafičnega 
+	vmesnika, ki bo izdelan kot konzolna aplikacija v jeziku C++ v integriranem razvojnem 
+	okolju Visual Studio. Od simulatorja pričakujemo brezhibno in robustno delovanje v 
+	operacijskem sistemu Windows. Poleg tega mora biti simulator hiter in preprost za uporabo. 
+	Simulator naj omogoča krmiljenje temperature, vlage in osvetljenosti prostora. Predpogoj 
+	je, da uporabnik v tekstovno datoteko vpiše želene ambientalne lastnosti v obliki: 
+	
+	TEMPERATURA: vrednost 
+
+	VLAZNOST: vrednost v obliki relativne vlažnosti [\%] 
+
+	OSVETLJENOST: vrednost v luksih [lx] 
+	\\
+	V datoteki naj bo še: 
+
+	INTERVAL TEMPERATURE: 10,40 STOPNJA 
+	
+	VLAZNOSTI: 30,60 
+
+	INTERVAL SVETILNOSTI: 10,10000 
+	\\
+	Simulator naj pred pričetkom prebere 
+	vrednosti iz datoteke, nato pa naj omogoča izbiro med tremi načini delovanja: 
+
+	1. Testni način: Uporabnik v program vnese dejansko temperaturo v prostoru. Računalnik vneseno 
+	temperaturo pretvori v ostale relevantne merske enote. Nato naj izračuna razliko do 
+	želene temperature (v vseh izbranih merskih enotah) in izvede ukaz za regulacijo 
+	temperature. Analogno naj simulator omogoča vpis, izračun in izvedbo ukazov še za 
+	vlažnost in osvetljenost. Simulacija se izvaja, dokler je ne prekine uporabnik. 
+	
+	2. Avtomatski način: Računalnik naj si izmisli dejansko temperaturo na intervalu 
+	podanem v datoteki, pri čemer jo pretvori v najpomembnejše preostale merske enote. 
+	Izmisli naj si še relativno stopnjo vlažnosti, in sicer med 30 in 60 \%, ter svetilnost 
+	na intervalu z datoteke. Nato naj za vsako posamezno meritev izračuna odstopanje od 
+	želenih vrednosti ter izvede ukaze za popravek. Simulator naj izvede 100 meritev, pri 
+	čemer izvede posamezno meritev vsake 3 sekunde. Na koncu simulacije naj izračuna 
+	povprečno vrednost meritev ter povprečno odstopanje od želenih vrednosti za posamezne 
+	parametre. 
+
+	3. Avtomatski način 2: Simulator naredi isto kot v točki 2, pri čemer 
+	naj uporabniku omogoča izbiro pri številu meritev in časovnem razmiku med njimi. 
+	Izvajalec mora natančno slediti vsem internim standardom in poskrbeti za dokumentacijo. 
+	
+	Sestavni del projekta sta tudi razvijalska dokumentacija in uporabniški priročnik. 
+	Od izvajalca pričakujemo, da do 24. 10. 2019 do 23.55 odda plan projekta, ki vključuje ceno. 
+	Program in dokumentacija morata biti oddana najkasneje 23. 1. 2020 do 23.55. 
+	Projekt bo plačan po posameznih zaključenih fazah. Za vsak teden zamude bo odbitih 10 \% plačila. 
+	\\
+	
+	\leftline{Maribor 01.10.2019} 
+
+	\hfill Direktor podjetja Šaj d.o.o.	
+
+\newpage
+
+\section{Nekoj vtor naslov}
+
+\end{document}
