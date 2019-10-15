@@ -12,7 +12,7 @@
 \fancyhf{}
 \lfoot{Powerd by \LaTeX}
 \cfoot{Verzija: 0.0.0.0}
-\rfoot{Strana: \thepage}
+\rfoot{Stran: \thepage}
 
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
@@ -106,11 +106,11 @@
 	\\
 	V datoteki naj bo še: 
 
-	INTERVAL TEMPERATURE: 10,40 STOPNJA 
+	INTERVAL TEMPERATURE: [10,40]
 	
-	VLAZNOSTI: 30,60 
+	STOPNJA VLAZNOSTI: [30,60]
 
-	INTERVAL SVETILNOSTI: 10,10000 
+	INTERVAL OSVETLJENOSTI: [10,10000] 
 	\\
 	Simulator naj pred pričetkom prebere 
 	vrednosti iz datoteke, nato pa naj omogoča izbiro med tremi načini delovanja: 
@@ -123,7 +123,7 @@
 	
 	2. Avtomatski način: Računalnik naj si izmisli dejansko temperaturo na intervalu 
 	podanem v datoteki, pri čemer jo pretvori v najpomembnejše preostale merske enote. 
-	Izmisli naj si še relativno stopnjo vlažnosti, in sicer med 30 in 60 \%, ter svetilnost 
+	Izmisli naj si še relativno stopnjo vlažnosti, in sicer med 30 in 60 \%, ter osvetljenost 
 	na intervalu z datoteke. Nato naj za vsako posamezno meritev izračuna odstopanje od 
 	želenih vrednosti ter izvede ukaze za popravek. Simulator naj izvede 100 meritev, pri 
 	čemer izvede posamezno meritev vsake 3 sekunde. Na koncu simulacije naj izračuna 
@@ -146,6 +146,70 @@
 
 \newpage
 
-\section{Nekoj vtor naslov}
+\section{Plan projekta}
+
+	\subsection{Tabela}
+
+	\subsection{Kratek opis problema}
+
+		\hspace{1em} Podjetje Šaj d.o.o. (v nadaljevanju naročnik) je dne 1. 10. 2019 naročilo 
+		razvoj centralnega sistema za upravljanje poslovnega prostora.
+		
+		Naročnik želi optimizirati svoje poslovne prostore z avtomatiziranim sistemom, 
+		ki meri in upravlja s paramteri. Sistem je preprost "simulator", ki je sposoben 
+		prilagajanja parametrov tako avtomatsko kot na specifične uporabnikove zahteve.
+		\subsubsection{Globalni cilji(globalne zahteve), ki jih želimo s produktom doseči}
+
+		\begin{itemize}
+			\item Izdelati simulator, ki primerno regulira parametre v prostoru
+			\item Simulator mora biti hiter in preprost za uporabo
+		\end{itemize}
+
+		\subsubsection{Omejitve}
+
+				\begin{itemize}
+					\item Programski jezik: C++
+					\item Operacijski sistem: Windows
+					\item Izdelan mora biti kot simulator
+					\item Konzolna aplikacija oz. brez grafičnega vmesnika
+				\end{itemize}
+
+		\subsubsection{Rok za zaključitev projekta, skupni stroški}
+
+				\begin{itemize}
+					\item Do 22.10.2019 do 23:55 oddan plan projekta 
+					\item Do 23.01.2019 do 23:55 oddan projekt
+				\end{itemize}
+
+		\subsubsection{Funkcije}
+
+				\begin{itemize}
+					\item Pretvarjanje temperature v merske enote
+					\item Razlika do želene temperature
+					\item Regulacina temperature
+					\item Računalnik simulira(ustvari svoje vrednosti) in na to	izračuna odstop od ustvarjene vrednosti
+				\end{itemize}
+
+		\subsubsection{Pomembne karakteristike}
+
+				\begin{itemize}
+					\item Preprost za uporabo oz. intuitiven in hiter
+					\item Delovanje v OS Windows
+				\end{itemize}
+
+		\subsubsection{Neizvedljive zahteve}
+
+				\begin{itemize}
+					\item Brezhibnost
+					\item Robustnost
+				\end{itemize}
+
+		\subsubsection{Označevanje verzij}
+
+				\begin{itemize}
+					\item Verzija: vx.y\_DDMMLLLL
+					\item x - velike spremembe, y - manjše spremembe
+					\item Primer: v3.1\_17112019
+				\end{itemize}
 
 \end{document}
