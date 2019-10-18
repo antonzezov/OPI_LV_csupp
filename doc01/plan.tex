@@ -4,6 +4,15 @@
 \usepackage{titling} %za renewcommand
 \usepackage{ragged2e} %za na pr. flushleft
 \usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{pdflscape}
+%\usepackage{array}
+%\usepackage{tabularx}
+\usepackage{makecell} %multiline cells + other non multiline cell are centered horiz. and vert.
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm}
 
 \setcounter{page}{0}
 \setcounter{section}{-1}
@@ -13,6 +22,7 @@
 \lfoot{Powerd by \LaTeX}
 \cfoot{Verzija: 0.0.0.0}
 \rfoot{Stran: \thepage}
+
 
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
@@ -211,5 +221,136 @@
 					\item x - velike spremembe, y - manjše spremembe
 					\item Primer: v3.1\_17112019
 				\end{itemize}
+
+	\subsection{Zagotavljanje kakovnosti (Načrt preverjanja)}
+
+		\subsubsection{Objekti preverjanja}
+
+			\begin{itemize}
+				\item D1 	Naročnikove zahteve
+				\item D2 	Plan projekta
+				\item D3 	Sistemske specifikacije
+				\item D4 	Testne primere
+				\item D5 	Poročilo o preverjanju
+				\item D6 	Načrtovalsko dokumentacijo
+				\item D7 	Uporabniški priročnik	
+			\end{itemize}
+
+			Glede na izbran model razvoja obstajajo delni in končni produkti, 
+			ki jih je potrebno na koncu vsake faze preveriti (glej tabelo 
+			Pregled po produktih in aktivnostih). Kompleten terminski plan 
+			je podan v nadaljevanju tega dokumenta. Končni produkt 
+			predstavljajo dokumenti D1-D7.
+
+			\begin{enumerate}[label=\alph*)]
+				\item Preverjanje programa v1.0
+
+					Program v1.0 bomo preverili s pregledom izvorne kode 
+					(stil kodiranja, skladnost s standardom) in testiranjem. 
+					Pripravljeni bodo določeni testni vzorci in postopki, 
+					ki jih bo natančneje definiral dokument Testni primeri. 
+					Preverjanje izvaja preverjevalec. Po preverjanju se izpolnijo 
+					pisna poročila o najdenih neustreznostih. Na podlagi teh poročil 
+					se izvede odpravljanje neustreznosti. Najprej se bodo preverili 
+					tipični testni vzorci, če pri njih ne najdemo resne hibe, se 
+					izvedejo tudi ostali testi. Ne izvaja se nobenih regresijskih testov.
+				\item Preverjanje programa v2.0
+
+					Program v2.0 bomo preverili s pregledom izvorne kode 
+					(stil kodiranja, skladnost s standardom) in testiranjem. Pripravljeni 
+					bodo določeni testni vzorci in postopki, ki jih bo natančneje definiral 
+					dokument Testni primeri. Preverjanje izvaja preverjevalec. Po preverjanju 
+					se izpolnijo pisna poročila o najdenih neustreznostih. Izvedejo se vsi 
+					testi (regresijsko testiranje).	
+			\end{enumerate}
+
+			\textbf{Uporabljene bodo naslednje strategije(podroben opis v prilogi)}
+
+				\begin{itemize}
+					\item prisotnost zahtev (Z)
+					\item prepovedane vrednosti - za preverjanje robustnosti (R)
+					\item mejne vrednosti (M)
+					\item ugibanje napak oziroma nepravilnosti (U)
+				\end{itemize}
+\newpage
+
+\begin{landscape}
+
+	\subsection{Naloge in rezultirajoči dokumenti(izbran razvojni model)}
+		\subsubsection{Pogled po produktih in aktivnostih}
+		\vspace{4cm}
+		\begin{center}
+		\footnotesize
+		\rowcolors{1}{gray}{white}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+				  \hline
+				  &Produkt&\makecell{Planirana \\ kompleksnost} &\makecell{Dejanska \\ kompleksnost}&\makecell{Odgovorna oseba \\ za produkt}&\makecell{V\&V metoda}&\makecell{Odgovorna \\ oseba za V\&V}&\makecell{Način sporočanja \\ o V\&V}&Opomba\\
+				\hline
+				D1&\makecell{Naročnikove zahteve}&1.5 strani& &naročnik&&&&\\
+				\hline
+				D2&Plan projekta&6 strani& &Anton Zhezhov&&&&\\
+				\hline
+				D3&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&&&&\\
+				\hline
+				  &Program v1.0&700 LOC&&Žiga Zorc&&&&\\
+				\hline
+				D4&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&&&&\\
+				\hline
+				D5&Testno poročilo&6 strani&&Anton Zhezhov&&&&\\
+				\hline
+				D6&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&&&&\\
+				\hline
+				D7&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&&&&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
+				\hline
+				  &Program v2.0&1300 LOC&&Žiga Zorc&&&&\\
+				\hline
+				  &\raisebox{0ex}{\makecell{Kompleten \\ produkt}}&1500 LOC&&vsi&&&&\\
+				\hline
+
+		\end{tabular}
+		\end{center}
+
+\newpage
+
+		\subsubsection{Rok in stroški}
+		\vspace{3cm}
+		\begin{center}
+		\rowcolors{1}{gray}{white}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+				\hline
+				&Aktivnost&Planiran rok&Dejanski rok&Planirani napor&Planirani stroški&\raisebox{0ex}{\makecell{Dejanski \\ napor}}&\raisebox{0ex}{\makecell{Dejanski \\ stroški}}&Izvajalec&\makecell{Odgovorna \\ oseba}\\
+				\hline
+				A1&\makecell{Planiranje projekta \\ in analiza zahtev}&22.10.2019&&4&400&&&&\\
+				\hline
+			 A2&Načrtovanje&03.11.2019&&4&400&&&&\\
+				\hline
+			 A3&\makecell{Implementacija \\ programa v1.0}&03.01.2020&&4&400&&&&\\
+				\hline
+				A4&\raisebox{0ex}{\makecell{Implementacija \\ programa v2.0}}&16.01.2020&&6&600&&&&\\
+				\hline
+			 A5&\makecell{Načrtovanje testnih \\ primerov}&03.01.2029&&2&200&&&&\\
+				\hline
+			 A6&\raisebox{0ex}{\makecell{Preverjanje programa \\ v1.0}}&09.01.2020&&3&300&&&&\\
+				\hline
+			 A7&\makecell{Preverjanje programa \\ v2.0}&TBD&&2&200&&&&\\
+				\hline
+				A8&\raisebox{0ex}{\makecell{Izdelava kompletne \\ dokumentacije}}&16.01.2020&&7&700&&&&\\
+				\hline
+			A9&\makecell{Prevzem}&23.01.2020&&1&100&&&&\\
+				\hline
+			A1&\makecell{Skupaj naport - stroški}&&&&3300&&&&\\
+				\hline
+
+		\end{tabular}
+		\end{center}
+
+
+\end{landscape}
+
+\newpage
+
+	\subsection{Resursi}
+
+		\subsubsection{Osebje}
 
 \end{document}
