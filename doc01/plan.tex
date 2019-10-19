@@ -6,11 +6,13 @@
 \usepackage{fancyhdr}
 \usepackage{enumitem}
 \usepackage{pdflscape}
-%\usepackage{array}
+\usepackage{array}
 %\usepackage{tabularx}
 \usepackage{makecell} %multiline cells + other non multiline cell are centered horiz. and vert.
 \usepackage[table]{xcolor}
 \usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
 
 \geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm}
 
@@ -23,6 +25,7 @@
 \cfoot{Verzija: 0.0.0.0}
 \rfoot{Stran: \thepage}
 
+\newcommand{\mlc}[1]{\raisebox{0ex}{\makecell{#1}}}
 
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
@@ -138,7 +141,7 @@
 	želenih vrednosti ter izvede ukaze za popravek. Simulator naj izvede 100 meritev, pri 
 	čemer izvede posamezno meritev vsake 3 sekunde. Na koncu simulacije naj izračuna 
 	povprečno vrednost meritev ter povprečno odstopanje od želenih vrednosti za posamezne 
-	parametre. 
+	\textcolor{red!80!}{\hyperlink{subsection.1.8}{parametre}}. 
 
 	3. Avtomatski način 2: Simulator naredi isto kot v točki 2, pri čemer 
 	naj uporabniku omogoča izbiro pri številu meritev in časovnem razmiku med njimi. 
@@ -171,7 +174,7 @@
 		\subsubsection{Globalni cilji(globalne zahteve), ki jih želimo s produktom doseči}
 
 		\begin{itemize}
-			\item Izdelati simulator, ki primerno regulira parametre v prostoru
+				\item Izdelati simulator, ki primerno regulira \textcolor{red!80!}{\hyperlink{subsection.1.8}{parametre}} v prostoru
 			\item Simulator mora biti hiter in preprost za uporabo
 		\end{itemize}
 
@@ -281,7 +284,7 @@
 		\vspace{4cm}
 		\begin{center}
 		\footnotesize
-		\rowcolors{1}{gray}{white}
+		\rowcolors{1}{violet!30!}{white}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 				  \hline
 				  &Produkt&\makecell{Planirana \\ kompleksnost} &\makecell{Dejanska \\ kompleksnost}&\makecell{Odgovorna oseba \\ za produkt}&\makecell{V\&V metoda}&\makecell{Odgovorna \\ oseba za V\&V}&\makecell{Način sporočanja \\ o V\&V}&Opomba\\
@@ -312,10 +315,10 @@
 
 \newpage
 
-		\subsubsection{Rok in stroški}
+		\subsubsection{Rok in stršoki}
 		\vspace{3cm}
 		\begin{center}
-		\rowcolors{1}{gray}{white}
+		\rowcolors{1}{cyan!20!}{white}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 				\hline
 				&Aktivnost&Planiran rok&Dejanski rok&Planirani napor&Planirani stroški&\raisebox{0ex}{\makecell{Dejanski \\ napor}}&\raisebox{0ex}{\makecell{Dejanski \\ stroški}}&Izvajalec&\makecell{Odgovorna \\ oseba}\\
@@ -352,5 +355,151 @@
 	\subsection{Resursi}
 
 		\subsubsection{Osebje}
+			\begin{center}
+			\rowcolors{1}{blue!40!}{green!30!}
+			\begin{tabular}{|c|c|>{\centering}m{0.43\textwidth}|c|}
+				\hline
+				&Oseba&Aktivnost&Vloga\\
+				\hline
+			  P1&Direktor podetja&
+			\begin{itemize}
+				\item nadzor
+				\item prevzem
+			\end{itemize}&naročnik\\
+				\hline
+			  P2&Anton Zhezhov&
+				\begin{itemize}
+					\item načrtovanje testnih primerov
+					\item testiranje
+				\end{itemize}&preverjevalec\\
+				\hline
+			  P3&Žiga Zorc&
+				\begin{itemize}
+					\item planiranje projekta
+					\item analiza zahtev
+					\item načrtovanje
+					\item implementacija programa v1.0
+					\item implementacija programa v2.0
+					\item izdelava načrtovalske dokumentacije
+					\item prevzem
+				\end{itemize}&razvojnik\\
+				\hline
+			\end{tabular}
+			\end{center}
+		
+		\subsubsection{Potrebna programska orodja, knjižnice}
+			\begin{center}
+			\begin{tabular}{|c|c|}
+					\hline
+					\rowcolor{red!30!} Orodje& Namen, funkcija\\
+					\hline
+					Microsoft Visual C++& Kodiranje, odpravljanje neustreznosti\\
+					\hline
+					\LaTeX &Vodenje dokumentacije\\
+					\hline
+					TBD& Merilnik kompleksnosti\\
+					\hline
+			\end{tabular}
+			\end{center}
+
+		\subsubsection{Potrebna strojna oprema}
+			\begin{center}
+			\begin{tabular}{|c|c|}
+					\hline
+					\rowcolor{yellow!40!} Orodje& Namen, funkcija\\
+					\hline
+					PC& Kodiranje, odpravljanje neustreznosti, vodenje dokumentacije, testiranje\\
+					\hline
+					Printer&Izpis dokumentacije\\
+					\hline	
+			\end{tabular}
+			\end{center}
+
+
+	\subsection{Razdelitev stroškov}
+		\qquad \qquad \textcolor[HTML]{C50918}{\hyperlink{subsubsection.1.4.2}{Točka 1.4.2}}
+
+\newpage
+
+\begin{landscape}
+
+	\subsection{Terminski plan projekta}
+
+		\vspace{2.5cm}
+		\begin{center}
+		\resizebox{24cm}{!}{
+		\rowcolors{1}{purple!30!}{orange!30!}
+		\begin{tabular}{|c|c||c|c|c|c|c|c|c|c|c|c||c|c|c|c|c|c|c|c|c|c||c|c|c|c|c|c|c|c|c|c||}
+				\hline
+				&Aktivnost&\multicolumn{30}{|c|}{Časovna skala}\\
+				\hline
+				&&1&\mlc{1\\2}&2&\mlc{2\\3}&3&\mlc{3\\4}&4&\mlc{4\\5}&5&\mlc{5\\6}&6&\mlc{6\\7}&7&\mlc{7\\8}&8&\mlc{8\\9}&9&\mlc{9\\10}&10&\mlc{10\\11}&11&\mlc{11\\12}&12&\mlc{12\\13}&13&\mlc{13\\14}&14&\mlc{14\\15}&15&\\
+				\hline
+				A1&\mlc{Planiranje projekta in analiza zahtev}&+&+&+&+&+&+&+& & & & & & & & & & & & & & & & & & & & & & & \\
+				\hline
+				A2&\mlc{Načrtovanje}& & & & & & & &+&+&+&+&+& & & & & & & & & & & & & & & & & & \\
+				\hline
+				A3&\mlc{Implementacija programa v1.0}& & & & & & & & & & & &+&+&+&+&+&+&+&+&+&+& & & & & & & & & \\
+				\hline
+				A4&\mlc{Implementacija programa v2.0}& & & & & & & & & & & & & & & & & & & & & &+&+&+&+&+& & & & \\
+				\hline
+				A5&\mlc{Načrtovanje testnih primerov}& & & & & & & & & & &+&+&+&+& & & & & & & & & & & & & & & & \\
+				\hline
+				A6&\mlc{Preverjanje programa v1.0}& & & & & & & & & & & &+&+&+&+&+&+&+&+&+&+& & & & & & & & & \\
+				\hline
+				A7&\mlc{Preverjanje programa v2.0}& & & & & & & & & & & & & & & & & & & & & &+&+&+&+&+& & & & \\
+				\hline
+				A8&\mlc{Izdelava kompletne dokumentacije}& & & & & & & & & & & & & & & & & & & & & & & & & & &+&+& & \\
+				\hline
+				A9&\mlc{Prevzem}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+& \\
+				\hline
+				&Dokument (skrajni rok)&1&\mlc{1\\2}&2&\mlc{2\\3}&3&\mlc{3\\4}&4&\mlc{4\\5}&5&\mlc{5\\6}&6&\mlc{6\\7}&7&\mlc{7\\8}&8&\mlc{8\\9}&9&\mlc{9\\10}&10&\mlc{10\\11}&11&\mlc{11\\12}&12&\mlc{12\\13}&13&\mlc{13\\14}&14&\mlc{14\\15}&15&\\
+				\hline
+				A1&\mlc{Naročnikove zahteve}&+& & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+				\hline
+				A2&\mlc{Plan projekta}& & & & & & &+& & & & & & & & & & & & & & & & & & & & & & & \\
+				\hline
+				A3&\mlc{Sistemske specifikacije}& & & & & & & & &+& & & & & & & & & & & & & & & & & & & & & \\
+				\hline
+				A4&\mlc{Testni vzorci}& & & & & & & & & & & & & & & & & & & & &+& & & & & & & & & \\
+				\hline
+				A5&\mlc{Testno poročilo}& & & & & & & & & & & & & & & & & & & & & & &+& & & & & & & \\
+				\hline
+				A6&\mlc{Načrtovalska dokumentacija}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+& \\
+				\hline
+				A7&\mlc{Uporabniški priročnik}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+& \\
+				\hline
+		\end{tabular}
+		}
+			\vspace{1cm}
+			\begin{itemize}
+				\item Legenda:
+				\begin{itemize}
+					\item planirani čas (+)
+					\item dejansko porabljen čas (*)
+				\end{itemize}
+			\end{itemize}
+		\end{center}
+		
+
+\end{landscape}
+	
+\newpage
+
+	\subsection{Pojmovnik}
+		
+		\begin{center}
+				\begin{tabular}{|c|c|}
+					\hline
+				    \rowcolor{green!20!}Pojem&Razlaga\\
+					\hline
+				    \hline
+					naročnik&Šaj d.o.o.\\
+					\hline
+					parametri&\mlc{Količine, s katerimi upravlja program \\(temperatura prostora, relativna vlažnost \\ prostora in osvetljenost prostora)}\\
+					\hline
+			\end{tabular}
+		\end{center}
+
 
 \end{document}
