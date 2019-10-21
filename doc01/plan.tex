@@ -13,6 +13,7 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{booktabs}
+\usepackage{color, soul}
 
 \geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm}
 
@@ -68,6 +69,13 @@
 
 
 \begin{document}
+
+%underline color options for "paramteri"
+\setul{0.6ex}{0.17ex}
+\definecolor{Red}{rgb}{1,0.0,0.6}
+\setulcolor{Red}
+
+
 
 \maketitle
 
@@ -141,7 +149,7 @@
 	želenih vrednosti ter izvede ukaze za popravek. Simulator naj izvede 100 meritev, pri 
 	čemer izvede posamezno meritev vsake 3 sekunde. Na koncu simulacije naj izračuna 
 	povprečno vrednost meritev ter povprečno odstopanje od želenih vrednosti za posamezne 
-	\textcolor{red!80!}{\hyperlink{subsection.1.8}{parametre}}. 
+	\hyperlink{subsection.1.8}{\ul{parametre}}. 
 
 	3. Avtomatski način 2: Simulator naredi isto kot v točki 2, pri čemer 
 	naj uporabniku omogoča izbiro pri številu meritev in časovnem razmiku med njimi. 
@@ -174,7 +182,7 @@
 		\subsubsection{Globalni cilji(globalne zahteve), ki jih želimo s produktom doseči}
 
 		\begin{itemize}
-				\item Izdelati simulator, ki primerno regulira \textcolor{red!80!}{\hyperlink{subsection.1.8}{parametre}} v prostoru
+				\item Izdelati simulator, ki primerno regulira {\hyperlink{subsection.1.8}{\ul{parametre}}} v prostoru
 			\item Simulator mora biti hiter in preprost za uporabo
 		\end{itemize}
 
@@ -227,6 +235,13 @@
 
 	\subsection{Zagotavljanje kakovnosti (Načrt preverjanja)}
 
+%underline color options for "prilogi"
+\setul{0.6ex}{0.17ex}
+\definecolor{Red}{rgb}{1,0.5,0.0}
+\setulcolor{Red}
+
+
+
 		\subsubsection{Objekti preverjanja}
 
 			\begin{itemize}
@@ -267,7 +282,7 @@
 					testi (regresijsko testiranje).	
 			\end{enumerate}
 
-			\textbf{Uporabljene bodo naslednje strategije(podroben opis v prilogi)}
+			\textbf{Uporabljene bodo naslednje strategije(podroben opis v \hyperlink{subsection.1.9}{\ul{prilogi}}})
 
 				\begin{itemize}
 					\item prisotnost zahtev (Z)
@@ -502,4 +517,65 @@
 		\end{center}
 
 
+	\subsection{Priloge}
+
+		\qquad \qquad Opisi uporabljenih strategij
+
+		\subsubsection{Opis strategije: Prisotnost zahtev (Z)}
+
+			\begin{enumerate}
+				\item Strategija je uporabna je v vseh primerih, kjer so znane specifikacije 
+					  oziroma zahteve, med katerimi ni nobenih relacij. Predpostavka o napaki: določena zahteva 
+					  ni implementirana. S to strategijo odkrivamo zahteve, ki niso implementirane. 
+					  Razen zelo redkih izjem, ne bomo odkrili napačno implementiranih zahtev in 
+					  zahtev, ki so po nepotrebnem implementirane.
+    			
+			 	\item Testirni model je seznam zahtev.
+				\item \textbf{Pravilo za načrtovanje testnih primerov:} Za vsako zahtevo tvori najmanj en testni primer. 
+					  Vhodne podatke si poljubno izberi.
+				\item Z načrtovanjem testnih primerov lahko začnemo, ko so zahteve postavljene.
+				\item Testirna strategija je izčrpana, ko preverimo prisotnost vsake zahteve v seznamu.
+			\end{enumerate}
+
+		\subsubsection{Opis strategije za preverjanje robustnosti (R)}
+				
+			\begin{enumerate}
+				\item Strategija je uporabna je v vseh primerih, kjer je zahtevana robustnost in je možno tvoriti opis vhodne domene.
+				\item Predpostavka o nepravilnosti: program ni robusten, čeprav bi moral biti. 
+					  S to strategijo ne bomo odkrili nepravilnosti, ki se pojavljajo pri procesiranju veljavnih podatkov.
+				\item Testirni model je opis vhodne domene.
+				\item \textbf{Pravilo za načrtovanje testnih primerov:} V vhodni domeni in identificiraj 
+					  prepovedane razrede. Za vsak prepovedan razred tvori en testni primer.
+				\item Z načrtovanjem testnih primerov lahko začnemo, ko je opisana vhodna domena.
+				\item Testirna strategija je izčrpana, ko smo pokrili vse neveljavne razrede v vhodni 
+					  domeni. Zgornje število testnih primerov je enako številu neveljavnih razredov.	
+			\end{enumerate}
+
+
+		\subsubsection{Opis strategije: ugibanje nepravilnosti (U)}
+				
+			\begin{enumerate}
+					\item Strategija je splošno uporabna.
+					\item Predpostavlja se, da je prisotna določena nepravilnost ali napaka.
+					\item Testirni model je seznam potencialnih nepravilnosti oziroma napak.
+					\item \textbf{Pravilo za načrtovanje testnih primerov:} Za vsako potencialno napako 
+						  oziroma nepravilnost v seznamu tvorimo en testni primer, s katerim preverimo, 
+						  ali je ta napaka/nepravilnost prisotna.
+					\item Z načrtovanjem testnih primerov lahko začnemo, ko je imamo pripravljen seznam.
+					\item Testirna strategija je izčrpana, ko smo pokrili celoten seznam. Zgornje število 
+						  testnih primerov je enako številu napak oziroma nepravilnosti v seznamu.	
+			\end{enumerate}
+
+		\subsubsection{Opis strategije: Mejne vrednosti (M)}
+				
+			\begin{enumerate}
+			  		\item Strategija je splošno uporabna.
+					\item Predpostavka o nepravilnosti: vhodni podatki, ki se nahajajo v okolici 
+						  ali pa točno na meji med veljavnim in neveljavnim območjem, se bodo nepravilno procesirali.
+					\item Testirni model je vhodna in izhodna domena.
+					\item \textbf{Pravilo za načrtovanje testnih primerov:} določi meje med veljavnimi in neveljavnimi 
+						  podatki. Izberi vrednost točno na meji, malo nad in malo pod njo.
+					\item Z načrtovanjem testnih primerov lahko začnemo, ko je imamo podatkovni slovar.
+					\item Testirna strategija je izčrpana, ko smo uporabili vse meje.	
+			\end{enumerate}
 \end{document}
