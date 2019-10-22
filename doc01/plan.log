@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.27)  22 OCT 2019 15:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.27)  22 OCT 2019 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -315,26 +315,29 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen137
 \SOUL@uldp=\dimen138
 \SOUL@ulht=\dimen139
+)
+(/usr/share/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
 ) (./plan.aux)
 \openout1 = `plan.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 71.
+LaTeX Info: Redefining \selectfont on input line 72.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -401,7 +404,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 71.
+Package hyperref Info: Link coloring OFF on input line 72.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -410,30 +413,42 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
  (./plan.out)
 (./plan.out)
 \@outlinefile=\write3
 \openout3 = `plan.out'.
 
+LaTeX Info: Redefining \celsius on input line 72.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 72.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 72.
+Package gensymb Info: Using \Omega for \ohm on input line 72.
+
+Package gensymb Warning: Not defining \micro.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 80.
+(Font)              <12> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 80.
+(Font)              <8> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 80.
- [0
+(Font)              <6> on input line 81.
+[0
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 86.
+(hyperref)                removing `\textasciicaron' on input line 87.
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 158--163
+Underfull \hbox (badness 10000) in paragraph at lines 159--164
 
  []
 
@@ -441,46 +456,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--163
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 182.
+(hyperref)                removing `\textasciicaron' on input line 183.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 185.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 186.
 
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 186.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 198.
+(hyperref)                removing `\textasciicaron' on input line 199.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 228.
+(hyperref)                removing `\textasciicaron' on input line 229.
 
 [3]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 236.
+(hyperref)                removing `\textasciicaron' on input line 237.
 
 [4]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 297.
+(hyperref)                removing `\textasciicaron' on input line 298.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 303.
+(Font)              <7> on input line 304.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 303.
+(Font)              <5> on input line 304.
 [5
 
 ]
-Overfull \hbox (11.44806pt too wide) in paragraph at lines 337--363
+Overfull \hbox (11.44806pt too wide) in paragraph at lines 338--364
  [] 
  []
 
@@ -491,33 +506,35 @@ Overfull \hbox (11.44806pt too wide) in paragraph at lines 337--363
 ] [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 587.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 588.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 587.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 588.
  (./plan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 587.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 587.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 588.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 588.
 Package rerunfilecheck Info: File `plan.out' has not changed.
 (rerunfilecheck)             Checksum: 8B89462D6F613D1B411D004B0E232D26;2397.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 587.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 588.
  ) 
 Here is how much of TeX's memory you used:
- 7273 strings out of 492623
- 104359 string characters out of 6135669
- 351063 words of memory out of 5000000
- 11046 multiletter control sequences out of 15000+600000
- 8813 words of font info for 31 fonts, out of 8000000 for 9000
+ 7321 strings out of 492623
+ 104964 string characters out of 6135669
+ 349402 words of memory out of 5000000
+ 11089 multiletter control sequences out of 15000+600000
+ 9160 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,17n,43p,300b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb>
-Output written on plan.pdf (11 pages, 102880 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on plan.pdf (11 pages, 127035 bytes).
 PDF statistics:
- 242 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
  67 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

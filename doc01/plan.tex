@@ -14,6 +14,7 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{color, soul}
+\usepackage{gensymb}
 
 \geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm}
 
@@ -91,7 +92,7 @@
 						\hline
 						Naročnik & Šaj d.o.o. \\
 						\hline
-						Lokacija dokumenta & link \\
+						Lokacija dokumenta & \href{https://github.com/antonzezov/OPI\_LV\_csupp/tree/master/doc01}{Github url} \\ %za zdaj ni public
 						\hline
 						Odgovorna oseba & Direktor podetja Šaj d.o.o. \\
 				\end{tabular}
@@ -199,16 +200,16 @@
 
 				\begin{itemize}
 					\item Do 22.10.2019 do 23:55 oddan plan projekta 
-					\item Do 23.01.2019 do 23:55 oddan projekt
+					\item Do 23.01.2020 do 23:55 oddan projekt
 				\end{itemize}
 
 		\subsubsection{Funkcije}
 
 				\begin{itemize}
-					\item Pretvarjanje temperature v merske enote
+						\item Pretvarjanje temperature v merske enote (Fahrenheit [$\degree F$], Kelvin [$K$], Rankine [$\degree R$], Delisle [$\degree De$], Newton [$\degree N$], Réaumur [$\degree $\textit{Ré}], Rømer [$\degree$\textit{Rø}])
 					\item Razlika do želene temperature
 					\item Regulacina temperature
-					\item Računalnik simulira(ustvari svoje vrednosti) in na to	izračuna odstop od ustvarjene vrednosti
+					\item Računalnik simulira (ustvari svoje vrednosti) in na to	izračuna odstop od ustvarjene vrednosti
 				\end{itemize}
 
 		\subsubsection{Pomembne karakteristike}
@@ -248,7 +249,7 @@
 				\item D1 	Naročnikove zahteve
 				\item D2 	Plan projekta
 				\item D3 	Sistemske specifikacije
-				\item D4 	Testne primere
+				\item D4 	Testni primeri
 				\item D5 	Poročilo o preverjanju
 				\item D6 	Načrtovalsko dokumentacijo
 				\item D7 	Uporabniški priročnik	
@@ -304,25 +305,25 @@
 				  \hline
 				  &Produkt&\makecell{Planirana \\ kompleksnost} &\makecell{Dejanska \\ kompleksnost}&\makecell{Odgovorna oseba \\ za produkt}&\raisebox{0ex}{\makecell{V\&V metoda}}&\raisebox{0ex}{\makecell{Odgovorna \\ oseba za V\&V}}&\makecell{Način sporočanja \\ o V\&V}&Opomba\\
 				\hline
-				D1&\makecell{Naročnikove zahteve}&1.5 strani& &naročnik&&&&\\
+				D1&\makecell{Naročnikove zahteve}&1.5 strani& &naročnik&splošni pregled&&ustno&\\
 				\hline
-				D2&Plan projekta&6 strani& &Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
+				D2&Plan projekta&6 strani& &Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				D3&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
+				D3&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				  &Program v1.0&700 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&&\\
+				  &Program v1.0&700 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
 				\hline
-				D4&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&sploš. pregled + test&Anton Zhezhov&&\\
+				D4&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&sploš. pregled + test&Anton Zhezhov&ustno&\\
 				\hline
-				D5&Testno poročilo&6 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
+				D5&Testno poročilo&6 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				D6&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
+				D6&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				D7&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&splošni pregled&Žiga Zorc&&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
+				D7&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&splošni pregled&Žiga Zorc&ustno&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
 				\hline
-				  &Program v2.0&1300 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&&\\
+				  &Program v2.0&1300 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
 				\hline
-				  &\raisebox{0ex}{\makecell{Kompleten \\ produkt}}&1500 LOC&&vsi&&&&\\
+				  &\raisebox{0ex}{\makecell{Kompleten \\ produkt}}&1500 LOC&&vsi&sploš. pregled + test&Naročnik&&\\
 				\hline
 
 		\end{tabular}
@@ -394,6 +395,7 @@
 					\item testiranje
 					\item planiranje projekta
 					\item izdelava načrtovalske dokumentacije
+					\item prevzem
 				\end{itemize}&preverjevalec\\
 				\hline
 			  P3&Žiga Zorc&
@@ -402,7 +404,6 @@
 					\item načrtovanje
 					\item implementacija programa v1.0
 					\item implementacija programa v2.0
-					\item prevzem
 				\end{itemize}&razvojnik\\
 				\hline
 			\end{tabular}
@@ -450,7 +451,7 @@
 		\begin{center}
 		\resizebox{24cm}{!}{
 				\rowcolors{1}{purple!30!}{}
-		\begin{tabular}{|c|c||c|c|c|c|c|c|c|c|c|c||c|c|c|c|c|c|c|c|c|c||c|c|c|c|c|c|c|c|c|c||}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c||}
 				\hline
 				&Aktivnost&\multicolumn{30}{|c|}{Časovna skala}\\
 				\hline
