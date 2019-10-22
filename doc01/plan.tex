@@ -23,7 +23,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lfoot{Powerd by \LaTeX}
-\cfoot{Verzija: 0.0.0.0}
+\cfoot{Verzija 1.0}
 \rfoot{Stran: \thepage}
 
 \newcommand{\mlc}[1]{\raisebox{0ex}{\makecell{#1}}}
@@ -44,7 +44,7 @@
 
 	\vspace{1cm}
 
-	\leftline{\textbf{Začetek: 09.10.2019 } \hfill \textbf{Konec: 00.00.2020}}
+	\leftline{\textbf{Začetek: 09.10.2019 } \hfill \textbf{Konec: 31.01.2020}}
 
 	\vspace{4cm}
 
@@ -178,7 +178,7 @@
 		
 		Naročnik želi optimizirati svoje poslovne prostore z avtomatiziranim sistemom, 
 		ki meri in upravlja s paramteri. Sistem je preprost "simulator", ki je sposoben 
-		prilagajanja parametrov tako avtomatsko kot na specifične uporabnikove zahteve.
+		prilagajanja \hyperlink{subsection.1.8}{\ul{parametrov}} tako avtomatsko kot na specifične uporabnikove zahteve.
 		\subsubsection{Globalni cilji(globalne zahteve), ki jih želimo s produktom doseči}
 
 		\begin{itemize}
@@ -282,7 +282,7 @@
 					testi (regresijsko testiranje).	
 			\end{enumerate}
 
-			\textbf{Uporabljene bodo naslednje strategije(podroben opis v \hyperlink{subsection.1.9}{\ul{prilogi}}})
+			\textbf{Uporabljene bodo naslednje strategije (podroben opis v \hyperlink{subsection.1.9}{\ul{prilogi}}})
 
 				\begin{itemize}
 					\item prisotnost zahtev (Z)
@@ -294,33 +294,33 @@
 
 \begin{landscape}
 
-	\subsection{Naloge in rezultirajoči dokumenti(izbran razvojni model)}
+	\subsection{Naloge in rezultirajoči dokumenti (izbran razvojni model)}
 		\subsubsection{Pogled po produktih in aktivnostih}
 		\vspace{4cm}
 		\begin{center}
 		\footnotesize
-		\rowcolors{1}{violet!30!}{white}
+		\rowcolors{1}{purple!30!}{white}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 				  \hline
-				  &Produkt&\makecell{Planirana \\ kompleksnost} &\makecell{Dejanska \\ kompleksnost}&\makecell{Odgovorna oseba \\ za produkt}&\makecell{V\&V metoda}&\makecell{Odgovorna \\ oseba za V\&V}&\makecell{Način sporočanja \\ o V\&V}&Opomba\\
+				  &Produkt&\makecell{Planirana \\ kompleksnost} &\makecell{Dejanska \\ kompleksnost}&\makecell{Odgovorna oseba \\ za produkt}&\raisebox{0ex}{\makecell{V\&V metoda}}&\raisebox{0ex}{\makecell{Odgovorna \\ oseba za V\&V}}&\makecell{Način sporočanja \\ o V\&V}&Opomba\\
 				\hline
 				D1&\makecell{Naročnikove zahteve}&1.5 strani& &naročnik&&&&\\
 				\hline
-				D2&Plan projekta&6 strani& &Anton Zhezhov&&&&\\
+				D2&Plan projekta&6 strani& &Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
 				\hline
-				D3&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&&&&\\
+				D3&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
 				\hline
-				  &Program v1.0&700 LOC&&Žiga Zorc&&&&\\
+				  &Program v1.0&700 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&&\\
 				\hline
-				D4&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&&&&\\
+				D4&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&sploš. pregled + test&Anton Zhezhov&&\\
 				\hline
-				D5&Testno poročilo&6 strani&&Anton Zhezhov&&&&\\
+				D5&Testno poročilo&6 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
 				\hline
-				D6&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&&&&\\
+				D6&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&&\\
 				\hline
-				D7&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&&&&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
+				D7&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&splošni pregled&Žiga Zorc&&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
 				\hline
-				  &Program v2.0&1300 LOC&&Žiga Zorc&&&&\\
+				  &Program v2.0&1300 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&&\\
 				\hline
 				  &\raisebox{0ex}{\makecell{Kompleten \\ produkt}}&1500 LOC&&vsi&&&&\\
 				\hline
@@ -333,7 +333,7 @@
 		\subsubsection{Rok in stršoki}
 		\vspace{3cm}
 		\begin{center}
-		\rowcolors{1}{cyan!20!}{white}
+		\rowcolors{1}{purple!30!}{}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 				\hline
 				&Aktivnost&Planiran rok&Dejanski rok&Planirani napor&Planirani stroški&\raisebox{0ex}{\makecell{Dejanski \\ napor}}&\raisebox{0ex}{\makecell{Dejanski \\ stroški}}&Izvajalec&\makecell{Odgovorna \\ oseba}\\
@@ -346,7 +346,7 @@
 				\hline
 				A4&\raisebox{0ex}{\makecell{Implementacija \\ programa v2.0}}&16.01.2020&&6&600&&&&\\
 				\hline
-			 A5&\makecell{Načrtovanje testnih \\ primerov}&03.01.2029&&2&200&&&&\\
+			 A5&\makecell{Načrtovanje testnih \\ primerov}&03.01.2020&&2&200&&&&\\
 				\hline
 			 A6&\raisebox{0ex}{\makecell{Preverjanje programa \\ v1.0}}&09.01.2020&&3&300&&&&\\
 				\hline
@@ -360,6 +360,12 @@
 				\hline
 
 		\end{tabular}
+
+				\vspace{1cm}
+
+				Enota napora: človek-dan
+
+				Stroški enote napora: 100 EUR
 		\end{center}
 
 
@@ -371,7 +377,7 @@
 
 		\subsubsection{Osebje}
 			\begin{center}
-			\rowcolors{1}{blue!40!}{green!30!}
+			\rowcolors{1}{purple!30!}{}
 			\begin{tabular}{|c|c|>{\centering}m{0.43\textwidth}|c|}
 				\hline
 				&Oseba&Aktivnost&Vloga\\
@@ -386,16 +392,16 @@
 				\begin{itemize}
 					\item načrtovanje testnih primerov
 					\item testiranje
+					\item planiranje projekta
+					\item izdelava načrtovalske dokumentacije
 				\end{itemize}&preverjevalec\\
 				\hline
 			  P3&Žiga Zorc&
 				\begin{itemize}
-					\item planiranje projekta
 					\item analiza zahtev
 					\item načrtovanje
 					\item implementacija programa v1.0
 					\item implementacija programa v2.0
-					\item izdelava načrtovalske dokumentacije
 					\item prevzem
 				\end{itemize}&razvojnik\\
 				\hline
@@ -406,7 +412,7 @@
 			\begin{center}
 			\begin{tabular}{|c|c|}
 					\hline
-					\rowcolor{red!30!} Orodje& Namen, funkcija\\
+					\rowcolor{purple!30!} Orodje& Namen, funkcija\\
 					\hline
 					Microsoft Visual C++& Kodiranje, odpravljanje neustreznosti\\
 					\hline
@@ -421,7 +427,7 @@
 			\begin{center}
 			\begin{tabular}{|c|c|}
 					\hline
-					\rowcolor{yellow!40!} Orodje& Namen, funkcija\\
+					\rowcolor{purple!30!} Orodje& Namen, funkcija\\
 					\hline
 					PC& Kodiranje, odpravljanje neustreznosti, vodenje dokumentacije, testiranje\\
 					\hline
@@ -443,7 +449,7 @@
 		\vspace{2.5cm}
 		\begin{center}
 		\resizebox{24cm}{!}{
-		\rowcolors{1}{purple!30!}{orange!30!}
+				\rowcolors{1}{purple!30!}{}
 		\begin{tabular}{|c|c||c|c|c|c|c|c|c|c|c|c||c|c|c|c|c|c|c|c|c|c||c|c|c|c|c|c|c|c|c|c||}
 				\hline
 				&Aktivnost&\multicolumn{30}{|c|}{Časovna skala}\\
@@ -506,7 +512,7 @@
 		\begin{center}
 				\begin{tabular}{|c|c|}
 					\hline
-				    \rowcolor{green!20!}Pojem&Razlaga\\
+				    \rowcolor{purple!30!}Pojem&Razlaga\\
 					\hline
 				    \hline
 					naročnik&Šaj d.o.o.\\
