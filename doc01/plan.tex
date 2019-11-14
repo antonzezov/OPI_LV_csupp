@@ -15,6 +15,7 @@
 \usepackage{booktabs}
 \usepackage{color, soul}
 \usepackage{gensymb}
+\usepackage{graphicx}
 
 \geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm}
 
@@ -24,7 +25,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lfoot{Powerd by \LaTeX}
-\cfoot{Verzija 1.0}
+\cfoot{Verzija 1.1}
 \rfoot{Stran: \thepage}
 
 \newcommand{\mlc}[1]{\raisebox{0ex}{\makecell{#1}}}
@@ -585,4 +586,195 @@
 					\item Z načrtovanjem testnih primerov lahko začnemo, ko je imamo podatkovni slovar.
 					\item Testirna strategija je izčrpana, ko smo uporabili vse meje.	
 			\end{enumerate}
+
+\newpage
+
+	\section{Sistemske specifikacije}
+		
+		\subsection{Povzetek}
+
+			\qquad Naročnik zahteva program v obliki simulatorja(brez grafičnega vmesnika). 
+			Simulator naj omogoča kmiljene temperature, vlage in osvetljenosti z pogojem 
+			da uporabnik vpiše želene ambientalne lastnosti v tekstovno datoteko. 
+			Pred pričetkom, program si mora prebrat vrednosti iz tekstovne datoteke 
+			in na to naj mogoči izbiro med tremi načini delovanja(Testni način, Avtomacki način, Avtomacki način 2).
+
+		\subsection{Zahteve glede posameznih karakteristik}
+
+			\subsubsection{Korektnost oziroma funkcionalnost}
+
+			\subsubsection{Zanesljivost}
+
+			\qquad Naročnik zahteva brezhibnost programa, ki je ni mogoče zagotoviti, zato se bo program 
+			podrobno testiral v skladu z standardom.
+
+			\subsubsection{Testabilnost}
+
+			\qquad Program mora vsebovati testni način, v katerem omogoča vnašanje 
+			vseh trenutnih in želenih vrednosti parametrov. Program izračuna in izpiše 
+			razliko ter izvede in izpiše primeren ukaz.
+
+			\subsubsection{Prenosljivost}
+
+			\qquad Program mora delovati v operacijskem sistemu Windows.
+
+			\subsubsection{Prijaznost}
+
+			\qquad Program bo menijsko voden z dodatno pomočjo za vse funkcije.
+
+			\subsubsection{Razumljivost}
+
+			\qquad Po lastni interpretaciji naročnikovih zahtev mora program 
+			biti razumljiv za uporabo vsaj za uporabnike, ki imajo osnovni nivo 
+			računalniške pismenosti.
+
+			\subsubsection{Varnost}
+
+			\qquad Ni zahtev.
+
+			\subsubsection{Vzdrževalnost}
+
+			\qquad Program mora biti dokumentiran v skladu z internimi standardi 
+			in zgrajen modularno za lažje spremembe, nadgradnje in implementacijo.
+
+			\subsubsection{Zmogljivost}
+
+			\qquad Naročnik zahteva, da program za en izračun ne porabi več kot 3 sekunde. 
+			V zahtevah ni podana strojna oprema na kateri se izvaja program, zato sklepamo, 
+			da mora to veljati na srednje zmogljivem računalniku (1.5 GHz).
+
+		\subsection{Omejitve in druge zahteve}
+
+			\subsubsection{Zagon programa v testnem načinu}
+
+				\qquad \qquad program -t
+
+			\subsubsection{Program ne sme vsebovat šumnikov}
+
+		\subsection{Opis sistema}
+
+			\qquad Opis funkcionalnosti je napravljen s pomočjo tipičnih vzorcev uporabe in diagramov.
+
+			\subsubsection{Tipični vzorci uporabe}
+
+			\subsubsection{Diagrami za opsis sistema in podsistemov}
+
+				\begin{itemize}
+					\item Slika 1 Nivo sistema (kontekstni nivo) - Diagram toka podatkov
+						
+						\begin{figure}[h]
+							\centering
+							\includegraphics[width=15cm]{diagrami_slike/nivo_sistema.png}
+						\end{figure}
+
+					\newpage
+
+					\item Slika 2 Nivo podsistemov - Diagram poteka.	
+
+						\begin{figure}[h]
+							\centering
+							\includegraphics[width=13cm]{diagrami_slike/nivo_podsistemov.png}
+						\end{figure}
+
+				\end{itemize}
+			
+			\subsubsection{Opis procesov}
+		
+				\begin{itemize}
+					\item Program - uporabnik zažene program in mu program omogoči izbiro med dvema načinoma delovanja programa
+					\item Testni način - do testnega načina se lahko dostopi samo z argumentom -t ko se program zažene preko cmd.
+						Testni način omogoča da uporabnik vnese temperaturo in vlažnost in na to avtmocki program nadaljue z izvajanjem
+						ostalih izračunov.
+					\item Avtomatski način 1 - izmisli vse potrebne veličine ki jih uporabnik vnaša v Testnem načinu oziroma simulira in
+						na koncu prikaže rezultate pretvorb in izračunov.
+					\item Avtomatski način 2 - uporabnik vnese število meritev in časovni razmik med njimi, ostale vrednosti program
+						izmisli kot v Avtomatske načinu 1 in na koncu prikaže rezultate pretvorb in izračunov.
+					\item Pretvorba v ostale relativne merske enote - program samo pretvori vneseno temperaturo v ostale merske enote.
+					\item Izračun razlike do želene temperature - program izračuna razliko med vneseno temperaturo v programu 
+						(dejanska temp. v prostoru) in želeno temperaturo ki jo prebere iz datoteke. Razlika temperature se izračuna
+						v vseh enotah za temperaturo.
+					\item Ukaz za regulacijo temperature - regulira temperaturo.
+					\item Rezultati - rezultati so podani v obliki tabele.
+				\end{itemize}
+
+
+		\subsection{Opis podatkovnih tokov in terminatorjev}
+
+			\subsubsection{Podatkovni slovar za sliko 2}
+
+			\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|}
+					\hline 
+					 &Ime podatka&Atribut&Tip&Veljavno območje&Opomba\\
+					\hline
+					1&Temperatura&&float&10 do 40&oblike: 14.36, 13.00\\
+					\hline
+					2&Vlažnost&&float&30 do 60&oblike: 42.5, 53.0\\
+					\hline
+					3&Število meritev&&integer&&\\
+					\hline
+					4&Časovni razmik&&integer&&\\
+					\hline
+			\end{tabular}
+			\end{center}
+
+		\subsection{Podroben opis in indeksiranje funkcij in drugih zahtev ki jih je potrebno implementirati}
+
+			\subsubsection{Interaktivni vnos}
+				\qquad \qquad Vnos temperature, vlažnosti, število meritev in časovni razmik preko tipkovnice.
+
+			\subsubsection{Branje iz datoteke}
+				\qquad \qquad Program mora znati prebrat ambientalne lastnosti iz datoteke.
+
+			\subsubsection{Pretvorba temperature v ostale relativne merske enote}
+				\qquad \qquad Program mora pretvoriti vneseno temperaturo v ostale merske enote za temperaturo.
+
+			\subsubsection{Izračun razlike do želene temperature}
+				\qquad \qquad Program mora izračunati razliko temperature v vseh mernih enotah.
+			
+			\subsubsection{Povprečna vrednost meritev in povprečno odstopanje}
+				\qquad \qquad Program mora izračunati povprečno vrednost meritev ter povprečno odstopanje od 
+				želenih vrednosti za posamezne parametre.
+
+			\subsubsection{Tabeliranje rezultatov}
+				\qquad \qquad Program mora tabelirati dobijenih rezultatov odvisnih od našega vnosa vrednosti.
+
+			\subsubsection{Kontrola vhodnih podatkov}
+				\qquad \qquad Program mora prepoznati in upozoriti če vnesemo ne veljavni tip podatka preko tipkovnice.
+
+			\subsubsection{Testni način}
+				\qquad \qquad Program mora imati vgrajen testni način delovanja ki je dostopen samo preko argumenta
+				ki ga dodamo ko zaženemo program. Testni način nam omogoča vpis dodatnih podatkov za natačno testiranje.
+		
+
+		\subsection{Zunanji videz}
+
+			\subsubsection{Glavni meni}
+
+				\includegraphics[width=12.5cm]{diagrami_slike/gl_meni.png}
+
+			\subsubsection{Avtomatski način}
+
+				\includegraphics[width=12.5cm]{diagrami_slike/avt_nac.png}
+
+\newpage
+
+			\subsubsection{Avtomatski način 2}
+
+				\includegraphics[width=12.5cm]{diagrami_slike/avt_nac2.png}
+
+			\subsubsection{Pomoč}
+
+			\subsubsection{Testni način}
+			
+
+		\subsection{Opis funkcij, ki bodo najprej implementirane}
+
+		\subsection{Prevzemni kriterij}
+
+			\begin{itemize}
+				\item Program mora biti dokumentiran skladno s standardom CVVS-2/2000
+				\item Program mora biti preverjen na najmanj 15 testnih primerih. 
+				Naročnik bo pripravil tri svoje testne primere, ki ne smejo pokazati na prisotnost večjih hib.
+			\end{itemize}
 \end{document}
