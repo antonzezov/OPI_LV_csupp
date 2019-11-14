@@ -1,0 +1,95 @@
+Centralni sistem za upravljanje poslovnega prostora, v1.00 [20112019]
+=====================================================================
+
+|===================|
+|                   |
+|****GLAVNI MENI****|
+|                   |
+|===================|
+
+=======================
+ 0) Izhod
+ 1) Avtomatski nacin
+ 2) Avtomatski nacin 2
+ +) Pomoc
+=======================
+
+|======================|
+|		       |
+|***AVTOMATSKI NACIN***|
+|		       |
+|======================|
+
+Zelene vrednosti:
+18°C, 50%, 2000lx
+
+Intervali:
+10-40°C, 30-60%, 10-10000lx
+
+Temperatura| Vlaznost |Osvetljenost|       Odstopanja       |  Ukazi
+    12.00°C|     70.0%|     02000lx|-06.00°C|+20.0%|+00000lx|T1,V2,O3
+...........|..........|............|........|......|........|........
+...........|..........|............|........|......|........|........
+...........|..........|............|........|......|........|........
+
+
+		   |Temperatura| Vlaznost |Osvetljenost
+povprecna vrednost |    12.00°C|     70.0%|      2000lx 
+odstopanje	   |	06.00°C|     20.0%|      0000lx
+
+
+
+|========================|
+|                        |
+|***AVTOMATSKI NACIN 2***|
+|                        |
+|========================|
+
+Stevilo meritev?
+>5
+Razmik med meritvami?[s]
+>7
+
+
+Zelene vrednosti:
+18°C, 50%, 2000lx
+
+Intervali:
+10-40°C, 30-60%, 10-10000lx
+
+Temperatura| Vlaznost |Osvetljenost|       Odstopanja       |  Ukazi
+    12.00°C|     70.0%|     02000lx|-06.00°C|+20.0%|+00000lx|T1,V2,O3
+...........|..........|............|........|......|........|........
+...........|..........|............|........|......|........|........
+...........|..........|............|........|......|........|........
+
+
+		   |Temperatura| Vlaznost |Osvetljenost
+povprecna vrednost |    12.00°C|     70.0%|      2000lx 
+odstopanje	   |	06.00°C|     20.0%|      0000lx
+
+
+
+
+
+
+
+
+
+
+
+
+****TESTNI NACIN****
+
+=====================
+
+***VNOS TEMPERATURE***
+>> 22
+=====================
+Vnesena temperatura:
+[22°C]
+[295,15K]
+
+
+
+
