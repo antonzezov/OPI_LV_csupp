@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.11.7)  14 NOV 2019 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.11.18)  3 JAN 2020 22:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -323,26 +323,32 @@ Package: gensymb 2003/07/02 v1.0 (WaS)
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 \Gin@req@height=\dimen140
 \Gin@req@width=\dimen141
+)
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks27
+\verbatim@line=\toks28
+\verbatim@in@stream=\read1
 ) (./plan.aux)
 \openout1 = `plan.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 73.
+LaTeX Info: Redefining \selectfont on input line 87.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -351,12 +357,12 @@ LaTeX Info: Redefining \selectfont on input line 73.
 \scratchbox=\box31
 \nofMPsegments=\count110
 \nofMParguments=\count111
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks29
 \MPscratchCnt=\count112
 \MPscratchDim=\dimen143
 \MPnumerator=\count113
 \makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks30
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -409,7 +415,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 73.
+Package hyperref Info: Link coloring OFF on input line 87.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -418,42 +424,42 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count115
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
-LaTeX Info: Redefining \nameref on input line 73.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
  (./plan.out)
 (./plan.out)
 \@outlinefile=\write3
 \openout3 = `plan.out'.
 
-LaTeX Info: Redefining \celsius on input line 73.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 73.
+LaTeX Info: Redefining \celsius on input line 87.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 87.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 73.
-Package gensymb Info: Using \Omega for \ohm on input line 73.
+LaTeX Info: Redefining \ohm on input line 87.
+Package gensymb Info: Using \Omega for \ohm on input line 87.
 
 Package gensymb Warning: Not defining \micro.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 82.
+(Font)              <12> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 82.
+(Font)              <8> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 82.
+(Font)              <6> on input line 96.
 [0
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 88.
+(hyperref)                removing `\textasciicaron' on input line 102.
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
+Underfull \hbox (badness 10000) in paragraph at lines 174--179
 
  []
 
@@ -461,46 +467,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--165
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 184.
+(hyperref)                removing `\textasciicaron' on input line 198.
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-87.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
+01.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 187.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 201.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 200.
+(hyperref)                removing `\textasciicaron' on input line 214.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 230.
+(hyperref)                removing `\textasciicaron' on input line 244.
 
 [3]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 238.
+(hyperref)                removing `\textasciicaron' on input line 252.
 
 [4]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 299.
+(hyperref)                removing `\textasciicaron' on input line 313.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 305.
+(Font)              <7> on input line 319.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 305.
+(Font)              <5> on input line 319.
 [5
 
 ]
-Overfull \hbox (11.44806pt too wide) in paragraph at lines 339--365
+Overfull \hbox (11.44806pt too wide) in paragraph at lines 353--379
  [] 
  []
 
@@ -511,7 +517,7 @@ Overfull \hbox (11.44806pt too wide) in paragraph at lines 339--365
 ] [9
 
 ] [10]
-Overfull \hbox (3.23067pt too wide) in paragraph at lines 596--601
+Overfull \hbox (3.23067pt too wide) in paragraph at lines 609--614
  \OT1/cmr/m/n/12 Naro^^Tcnik za-hteva pro-gram v ob-liki sim-u-la-torja(brez gr
 afi^^Tcnega vmes-nika). Sim-u-la-tor naj omogo^^Tca
  []
@@ -519,115 +525,185 @@ afi^^Tcnega vmes-nika). Sim-u-la-tor naj omogo^^Tca
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 648.
+(hyperref)                removing `\textasciicaron' on input line 661.
 
 [11]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 658.
+(hyperref)                removing `\textasciicaron' on input line 671.
 
-<diagrami_slike/nivo_sistema.png, id=367, 532.99126pt x 362.35374pt>
+<diagrami_slike/nivo_sistema.png, id=403, 532.99126pt x 362.35374pt>
 File: diagrami_slike/nivo_sistema.png Graphic file (type png)
 <use diagrami_slike/nivo_sistema.png>
-Package pdftex.def Info: diagrami_slike/nivo_sistema.png  used on input line 66
-7.
+Package pdftex.def Info: diagrami_slike/nivo_sistema.png  used on input line 68
+0.
 (pdftex.def)             Requested size: 426.79134pt x 290.15984pt.
 [12 <./diagrami_slike/nivo_sistema.png>]
-<diagrami_slike/nivo_podsistemov.png, id=375, 573.14125pt x 693.59125pt>
+<diagrami_slike/nivo_podsistemov.png, id=411, 573.14125pt x 693.59125pt>
 File: diagrami_slike/nivo_podsistemov.png Graphic file (type png)
 <use diagrami_slike/nivo_podsistemov.png>
 Package pdftex.def Info: diagrami_slike/nivo_podsistemov.png  used on input lin
-e 676.
+e 689.
 (pdftex.def)             Requested size: 369.88582pt x 447.62222pt.
  [13 <./diagrami_slike/nivo_podsistemov.png>]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 732.
+(hyperref)                removing `\textasciicaron' on input line 761.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 735.
+(hyperref)                removing `\textasciicaron' on input line 764.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 735.
-
-
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 745.
+(hyperref)                removing `\textasciicaron' on input line 764.
 
 [14]
-<diagrami_slike/gl_meni.png, id=385, 522.95375pt x 318.18875pt>
-File: diagrami_slike/gl_meni.png Graphic file (type png)
-<use diagrami_slike/gl_meni.png>
-Package pdftex.def Info: diagrami_slike/gl_meni.png  used on input line 754.
-(pdftex.def)             Requested size: 355.65944pt x 216.40431pt.
-
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 756.
+(hyperref)                removing `\textasciicaron' on input line 774.
 
-<diagrami_slike/avt_nac.png, id=386, 525.965pt x 484.81125pt>
+<diagrami_slike/gl_meni.png, id=421, 522.95375pt x 318.18875pt>
+File: diagrami_slike/gl_meni.png Graphic file (type png)
+<use diagrami_slike/gl_meni.png>
+Package pdftex.def Info: diagrami_slike/gl_meni.png  used on input line 783.
+(pdftex.def)             Requested size: 312.9803pt x 190.43405pt.
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 785.
+
+<diagrami_slike/avt_nac.png, id=422, 525.965pt x 484.81125pt>
 File: diagrami_slike/avt_nac.png Graphic file (type png)
 <use diagrami_slike/avt_nac.png>
-Package pdftex.def Info: diagrami_slike/avt_nac.png  used on input line 758.
-(pdftex.def)             Requested size: 355.65944pt x 327.84007pt.
+Package pdftex.def Info: diagrami_slike/avt_nac.png  used on input line 787.
+(pdftex.def)             Requested size: 312.9803pt x 288.49956pt.
 [15 <./diagrami_slike/gl_meni.png> <./diagrami_slike/avt_nac.png>]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 762.
+(hyperref)                removing `\textasciicaron' on input line 791.
 
-<diagrami_slike/avt_nac2.png, id=393, 516.93124pt x 592.2125pt>
+<diagrami_slike/avt_nac2.png, id=429, 516.93124pt x 592.2125pt>
 File: diagrami_slike/avt_nac2.png Graphic file (type png)
 <use diagrami_slike/avt_nac2.png>
-Package pdftex.def Info: diagrami_slike/avt_nac2.png  used on input line 764.
-(pdftex.def)             Requested size: 355.65944pt x 407.4704pt.
+Package pdftex.def Info: diagrami_slike/avt_nac2.png  used on input line 793.
+(pdftex.def)             Requested size: 284.52756pt x 325.9709pt.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 766.
+(hyperref)                removing `\textasciicaron' on input line 795.
 
+<diagrami_slike/pomoc.png, id=430, 291.33844pt x 463.7325pt>
+File: diagrami_slike/pomoc.png Graphic file (type png)
+<use diagrami_slike/pomoc.png>
+Package pdftex.def Info: diagrami_slike/pomoc.png  used on input line 797.
+(pdftex.def)             Requested size: 207.7052pt x 330.61803pt.
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 768.
+(hyperref)                removing `\textasciicaron' on input line 799.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 780.
-[16 <./diagrami_slike/avt_nac2.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 780.
+<diagrami_slike/testni_nacin.jpg, id=431, 414.96968pt x 323.27226pt>
+File: diagrami_slike/testni_nacin.jpg Graphic file (type jpg)
+<use diagrami_slike/testni_nacin.jpg>
+Package pdftex.def Info: diagrami_slike/testni_nacin.jpg  used on input line 80
+1.
+(pdftex.def)             Requested size: 233.3125pt x 181.76128pt.
+[16 <./diagrami_slike/avt_nac2.png> <./diagrami_slike/pomoc.png>] [17 <./diagra
+mi_slike/testni_nacin.jpg>]
+Overfull \hbox (13.12178pt too wide) in paragraph at lines 860--863
+ \OT1/cmr/m/n/12 V okolju MS Win-dows odpremo da-toteko v ka-tro se na-haja pro
+-gram csup-pvX[]Y[]DDMMYYYY.exe,
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 865.
+[18]
+Overfull \hbox (8.23158pt too wide) in paragraph at lines 874--899
+ [] 
+ []
+
+[19
+
+] [20
+
+] [21
+
+] [22
+
+
+] [23
+
+
+] [24
+
+
+] [25
+
+
+] [26
+
+
+] [27
+
+
+] [28
+
+
+] [29
+
+
+] [30
+
+
+]
+Overfull \hbox (8.48773pt too wide) in paragraph at lines 1660--1713
+ [][] 
+ []
+
+[31
+
+
+] [32
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1769.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1769.
  (./plan.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 780.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 780.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1769.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1769.
+
 Package rerunfilecheck Info: File `plan.out' has not changed.
-(rerunfilecheck)             Checksum: 6B9AEAAB776DAE95A57BF46D1AF03623;5465.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 780.
+(rerunfilecheck)             Checksum: 2826FFAEAD6EC72DC28F1602B150341D;6161.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1769.
  ) 
 Here is how much of TeX's memory you used:
- 7597 strings out of 492167
- 109584 string characters out of 6131558
- 355384 words of memory out of 5000000
- 11760 multiletter control sequences out of 15000+600000
- 9160 words of font info for 32 fonts, out of 8000000 for 9000
+ 7703 strings out of 492167
+ 111281 string characters out of 6131557
+ 356071 words of memory out of 5000000
+ 11823 multiletter control sequences out of 15000+600000
+ 9715 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,17n,45p,300b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on plan.pdf (17 pages, 199509 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti12.pfb>
+Output written on plan.pdf (33 pages, 288021 bytes).
 PDF statistics:
- 454 PDF objects out of 1000 (max. 8388607)
- 412 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
- 570 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 584 PDF objects out of 1000 (max. 8388607)
+ 521 compressed objects within 6 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 652 words of extra memory for PDF output out of 10000 (max. 10000000)
 

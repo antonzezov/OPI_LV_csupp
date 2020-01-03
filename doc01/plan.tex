@@ -16,16 +16,30 @@
 \usepackage{color, soul}
 \usepackage{gensymb}
 \usepackage{graphicx}
+\usepackage{verbatim} %comment sections
+\usepackage{makecell}
+
+
+\usepackage{array}                                                                                                                                               
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=2cm}
 
 \setcounter{page}{0}
 \setcounter{section}{-1}
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \pagestyle{fancy}
 \fancyhf{}
 \lfoot{Powerd by \LaTeX}
-\cfoot{Verzija 1.1}
+\cfoot{Verzija 1.4}
 \rfoot{Stran: \thepage}
 
 \newcommand{\mlc}[1]{\raisebox{0ex}{\makecell{#1}}}
@@ -247,20 +261,20 @@
 		\subsubsection{Objekti preverjanja}
 
 			\begin{itemize}
-				\item D1 	Naročnikove zahteve
-				\item D2 	Plan projekta
-				\item D3 	Sistemske specifikacije
-				\item D4 	Testni primeri
-				\item D5 	Poročilo o preverjanju
-				\item D6 	Načrtovalsko dokumentacijo
-				\item D7 	Uporabniški priročnik	
+				\item 0 - Naročnikove zahteve
+				\item 1 - Plan projekta
+				\item 2 - Sistemske specifikacije
+				\item 3 - Testni primeri
+				\item 4 - Poročilo o preverjanju
+				\item 5 - Načrtovalsko dokumentacijo
+				\item 6 - Uporabniški priročnik	
 			\end{itemize}
 
 			Glede na izbran model razvoja obstajajo delni in končni produkti, 
 			ki jih je potrebno na koncu vsake faze preveriti (glej tabelo 
 			Pregled po produktih in aktivnostih). Kompleten terminski plan 
 			je podan v nadaljevanju tega dokumenta. Končni produkt 
-			predstavljajo dokumenti D1-D7.
+			predstavljajo dokumenti 0 - 6.
 
 			\begin{enumerate}[label=\alph*)]
 				\item Preverjanje programa v1.0
@@ -306,21 +320,21 @@
 				  \hline
 				  &Produkt&\makecell{Planirana \\ kompleksnost} &\makecell{Dejanska \\ kompleksnost}&\makecell{Odgovorna oseba \\ za produkt}&\raisebox{0ex}{\makecell{V\&V metoda}}&\raisebox{0ex}{\makecell{Odgovorna \\ oseba za V\&V}}&\makecell{Način sporočanja \\ o V\&V}&Opomba\\
 				\hline
-				D1&\makecell{Naročnikove zahteve}&1.5 strani& &naročnik&splošni pregled&&ustno&\\
+				0&\makecell{Naročnikove zahteve}&1.5 strani& &naročnik&splošni pregled&&ustno&\\
 				\hline
-				D2&Plan projekta&6 strani& &Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				1&Plan projekta&6 strani& &Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				D3&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				2&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
 				  &Program v1.0&700 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
 				\hline
-				D4&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&sploš. pregled + test&Anton Zhezhov&ustno&\\
+				3&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&sploš. pregled + test&Anton Zhezhov&ustno&\\
 				\hline
-				D5&Testno poročilo&6 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				4&Testno poročilo&6 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				D6&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				5&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				D7&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&splošni pregled&Žiga Zorc&ustno&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
+				6&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&splošni pregled&Žiga Zorc&ustno&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
 				\hline
 				  &Program v2.0&1300 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
 				\hline
@@ -515,7 +529,6 @@
 				\begin{tabular}{|c|c|}
 					\hline
 				    \rowcolor{purple!30!}Pojem&Razlaga\\
-					\hline
 				    \hline
 					naročnik&Šaj d.o.o.\\
 					\hline
@@ -705,7 +718,7 @@
 			\begin{center}
 			\begin{tabular}{|c|c|c|c|c|c|}
 					\hline 
-					 &Ime podatka&Atribut&Tip&Veljavno območje&Opomba\\
+					\rowcolor{purple!30!} &Ime podatka&Atribut&Tip&Veljavno območje&Opomba\\
 					\hline
 					1&Temperatura&&float&10 do 40&oblike: 14.36, 13.00\\
 					\hline
@@ -717,6 +730,22 @@
 					\hline
 			\end{tabular}
 			\end{center}
+
+			\subsubsection{Opis terminatorjev}
+			{%\renewcommand{\arraystretch}{1.5}	
+			\begin{center}
+			\begin{tabular}{|c|c|}
+					\hline
+					\rowcolor{purple!30!}Ime terminatorja&Opomba \\
+					\hline
+					Uporabnik&Oseba ki uporablja program \\
+					\hline
+					Datoteka z ambientalnimi lastnosti & \thead{Vsaka ambientalna lastnost je napisana v novo vrstico \\ 
+															Primer: TEMPERATURA: 25 \\ \hspace{0.7cm} VLAZNOST: 35 ...}  \\
+					\hline
+			\end{tabular}
+			\end{center}
+			}
 
 		\subsection{Podroben opis in indeksiranje funkcij in drugih zahtev ki jih je potrebno implementirati}
 
@@ -751,24 +780,53 @@
 
 			\subsubsection{Glavni meni}
 
-				\includegraphics[width=12.5cm]{diagrami_slike/gl_meni.png}
+				\includegraphics[width=11cm]{diagrami_slike/gl_meni.png}
 
 			\subsubsection{Avtomatski način}
 
-				\includegraphics[width=12.5cm]{diagrami_slike/avt_nac.png}
+				\includegraphics[width=11cm]{diagrami_slike/avt_nac.png}
 
 \newpage
 
 			\subsubsection{Avtomatski način 2}
 
-				\includegraphics[width=12.5cm]{diagrami_slike/avt_nac2.png}
+				\includegraphics[width=10cm]{diagrami_slike/avt_nac2.png}
 
 			\subsubsection{Pomoč}
 
+				\includegraphics[width=7.3cm]{diagrami_slike/pomoc.png}
+
 			\subsubsection{Testni način}
-			
+		
+				\includegraphics[width=8.2cm]{diagrami_slike/testni_nacin.jpg}
 
 		\subsection{Opis funkcij, ki bodo najprej implementirane}
+
+			\begin{itemize}
+				\item Glavni meni
+						\begin{itemize}
+							\item Prebere vrednosti iz datoteke
+							\item Interaktivna izbira načina delovanja
+						\end{itemize}
+				\item Avtomatski način
+						\begin{itemize}
+							\item Program si izmisli vrednosti
+							\item Izračun odstopanja od želene vrednosti
+							\item Ukaz za popravek
+							\item Tabeliranje izračunane vrednosti
+							\item Izračun povprečno vrednost meritev
+							\item Izračun povprečno odstopanje od želenih vrednosti za posamezne parametre
+						\end{itemize}
+				\item Avtomatski način 2
+						\begin{itemize}
+							\item Interaktivni vnos za število meritev in časovni razmik med njimi
+							\item Način izračuna in izpisa je enaki kot v Avtomatske načinu
+						\end{itemize}
+				\item Izhod
+						\begin{itemize}
+							\item Program se zapre
+						\end{itemize}
+			\end{itemize}
 
 		\subsection{Prevzemni kriterij}
 
@@ -777,4 +835,935 @@
 				\item Program mora biti preverjen na najmanj 15 testnih primerih. 
 				Naročnik bo pripravil tri svoje testne primere, ki ne smejo pokazati na prisotnost večjih hib.
 			\end{itemize}
+
+\newpage
+
+	\section{Testni primeri}
+
+		\subsection{Povzetek}
+
+		\qquad Na podlagi naročnikovih zahtev in Plana projekta, je bil izdelan ta dokument, ki natančno definira 
+		postopek testiranja in testne primere. Dokument je  uporaben  za  evalvacijo  prototipa
+		in  za  testiranje  kompletnega  programa.  Rezultati  testiranja  so  opisani 
+		v Poročilu o preverjanju.
+
+		\subsection{Identifikacija objektov, na katere se testni vzorci nanašajo}
+
+		\qquad Testni primeri se nanašajo na csuppv0\_0\_20112019.exe in csuppv1\_0\_20112019.exe
+
+		\subsection{Opis testnih primerov}
+
+		\qquad Tvoreni so 17 testnih primerov v 3 kategorije, ki bodo za testiranje programa v1.0.
+
+		\subsection{Opis testnega postopka}
+
+		\qquad V okolju MS Windows odpremo datoteko v katro se nahaja program csuppvX\_Y\_DDMMYYYY.exe,
+		z dvoklikom na miško zaženemo program in začnemo interaktivno vpisovati testne primere preko 
+		tipkovnice. 
+
+		\ V primeru testiranja testnega načina odpremo okno command prompt(cmd.exe) in z
+		pomočjo ukaza \textbf{cd ime\_datoteke\textbackslash} se prestavimo v datoteko v katero se 
+		nahaja csuppvX\_Y\_DDMMYYYY.exe in zaženemo program na način \textbf{csuppvX\_Y\_DDMMYYYY.exe -t}.
+
+\newpage
+	
+	\begin{landscape}
+		\subsection{Identifikacija funkcij in zahtev ter testna matrika}
+			\footnotesize
+			\centering
+			\begin{tabular}{|c|c|c|c|c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+					Kratek opis&Kompleksnost&\thead{Stopnja \\  kritičnosti}&\thead{Indikator \\ pomembnosti}&\thead{Število \\ testov}
+					&T&T&T&T&T&T&T&T&T&T&T&T&T&T&T&T&T&T&T&T\\
+			\hline
+				Interaktivni vnos&2&3&6&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+				Branje iz datoteke&2&3&6&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+				Pretvorba temp.&3&2&6&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+				Izračun temp. razl.&1&2&2&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+				PVM in PO&1&2&2&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+				Tabeliranje rezultov&2&2&4&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+				Kontrola vh. podat.&3&3&9&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+				Testni način&2&1&2&&&&&&&&&&&&&&&&&&&&&\\
+				\hline
+					Skupaj&&&37(100\%)&&&&&&&&&&&&&&&&&&&&&\\
+			\hline
+
+		\end{tabular}
+
+	\end{landscape}
+\newpage
+		\subsection{Priloga}
+
+			%\subsubsection{Opis vhodne domene}
+
+			%\subsubsection{Opis izhodne domene}
+
+			\subsubsection{Priloga s konkretnimi testni primeri}
+
+			
+			\ Preverjanje prisotnosti zahtev:
+				\begin{itemize}
+
+					\item TP1-1 Ali je prisotna najbolj kritična funkconalnost?
+							Ali je implementiran testni režim?
+
+					\item TP1-2 Ali je vedno prisotna vgrajena pomoč?
+
+					%\item TP1-3 Ali sta zahtevana natančnost in hitrost prisotna?
+
+				\end{itemize}
+			\ Preverjanje natančnost in pravilnost izračunov:
+				\begin{itemize}
+					\item TP2-1 Ali program generira vse pravilne vrednosti za pravilno delovanje Avtomatskega načina?
+					\item TP2-2 Ali program izvede zahtevano število meritev za zahtevanega časovnega rezmika ?
+					\item TP2-3 Ali program izračuna povprečno vrednost meritev ter povprečno odstopanje od želenih vrednosti za posamezne parametre ?
+					\item TP2-4 Ali program pretvori vneseno temperaturo v ostale merske enote ?
+					\item TP2-5 Ali program izračuna razliko do želene temperature (v vseh merskih enotah) ?
+					\item TP2-6 Ali program pravilno izvede ukaz za regulacijo temperature ?
+					\item TP2-7 Ali program pravilno izračuna in izvede ukaze za vlažnost in osvetljenost ? 
+					\item TP2-8 Ali program prekine svoje izvajanje na zahtevo uporabnika v Testnem načinu ?
+				\end{itemize}
+			\ Preverjanje robustnosti vhodnih podatkov:
+				\begin{itemize}
+
+					\item TP3-1 Ali program pravilno procesira neveljavne vhodne podatke?
+					\item TP3-2 Ali program opozori za vnost temperature izven intervala $(10\ \degree C,40\ \degree C)$
+					\item TP3-3 Ali program opozori za vnos vlažnosti izven intervala $(30\%,60\%)$
+					\item TP3-4 Ali program opozori za vnos osvetljenosti izven intervala $(10\ lx,10000\ lx)$
+					\item TP3-5 Ali program opozori za maksimalno možno število meritev?
+					\item TP3-6 Ali program opozori za minimalni ali maksimalni časovni razmik med število meritev?
+					\item TP3-7 Ali je program odporen na nepravilni vnos ambientalnih lastnosti v tekstovno datoteko?
+
+				\end{itemize}
+			
+\newpage
+
+	\begin{landscape}
+
+			\paragraph{Ali je prisotna najbolj kritična funkcionalnost in Testni način ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP1-1& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Ali je prisotna najbolj \\ 
+											kritična funkcionalnost \\ 
+											in Testni način ?}& Windows 10 Pro&\thead{Preverjanje \\ 
+																						prisotnosti zahtev.}&\thead{Testni način \\ 
+																											je za demonstracijo
+																											\\delovanje programa.}&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|C{5.5cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe -t&&\small{Izpis da smo v Testnem  
+														načinu, pod izpisa, interaktivni 
+														vnos za temeraturo.}&&\\
+					\hline
+					2&Vpišemo temperaturo&37&\small{Izpis vnesene temperature   
+													z enoto in pretvorba v ostale merske 
+													enote, pod izpisa, 
+													interaktivni vnost za vlažnost.}&&\\
+					3&Vpišemo vlažnost&48&\small{Pod vpisano vrednost,
+												interaktivni vnost za osvetljenost.}&&\\
+					\hline
+					4&Vpišemo osvetljenost&5243&\small{Pod vpisano vrednost se izpišejo
+													želene vrednosti se izvedejo 
+													potrebni izračuni in tabeliranje.}&&\\
+					\hline
+					5&Zahtevamo prekinitev izračunov&p&Izračuni in tabeliranje se prekineta.&&\\
+
+					\hline
+					6&Izberemo ponovni vnos vrednosti&*&\small{Izpis da smo v Testnem 
+														načinu, pod izpisa, interaktivni 
+														vnos za temeraturo.}&&\\
+					\hline
+					7&Korake od 2 do 5&&\small{Pričekujemo enaki 
+										način delovanje
+										kot v korake od 2 do 5.}&&\\ 
+					\hline
+					8&Želimo izhod&0&\small{Okno Command Prompt
+											(odprto na lokaciji
+											mapao programa).}&&\\
+					\hline
+			\end{tabular}
+
+
+			
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali je vedno prisotna vgrajena pomoč ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP1-2& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Ali je vedno prisotna \\ 
+											vgrajena pomoč ? \\}& Windows 10 Pro&\thead{Preverjanje \\ 
+																						prisotnosti zahtev.}&\thead{Testni način \\ 
+																											je za demonstracijo
+																											\\delovanje programa.}&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.5cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe -t&&\small{Izpis da smo v Testnem  
+														načinu, pod izpisa, interaktivni 
+														vnos za temeraturo.}&&\\
+					\hline
+					2&Zahtevamo pomoč&+&Izpis pomoči za to polje&&\\
+					\hline
+					3&Vpišemo temperaturo&37&\small{Izpis vnesene temperature   
+													z enoto in pretvorba v ostale merske enote, 
+													pod izpisa, 
+													interaktivni vnost za vlažnost.}&&\\
+					\hline
+					4&Zahtevamo pomoč&+&Izpis pomoči za to polje&&\\
+					\hline
+					5&Vpišemo vlažnost&48&\small{Pod vpisano vrednost,
+												interaktivni vnost za osvetljenost.}&&\\
+					\hline
+					6&Zahtevamo pomoč&+&Izpis pomoči za to polje&&\\
+					\hline
+					7&Vpišemo osvetljenost&5243&\small{Pod vpisano vrednost se izpišejo
+													želene vrednosti se izvedejo 
+													potrebni izračuni in tabeliranje.}&&\\
+					\hline
+					8&Zahtevamo pomoč&+&Izpis pomoči za to polje&&\\
+					\hline
+					9&Izberemo ponovni vnos vrednosti&*&\small{Izpis da smo v Testnem 
+														načinu, pod izpisa, interaktivni 
+														vnos za temeraturo.}&&\\
+					\hline
+					10&Korake od 2 do 9&&\small{Pričekujemo enaki 
+										način delovanje
+										kot v korake od 2 do 9.}&&\\ 
+					\hline
+					11&Želimo izhod&0&\small{Okno Command Prompt
+											(odprto na lokaciji
+											mapao programa).}&&\\
+					\hline
+			\end{tabular}
+
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program generira vse pravilne vrednosti za pravilno delovanje Avtomatskega načina ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-1& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Generiranje \\  
+												pravilne vrednosti.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.5cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe&&\small{Izpis da smo v Glavni meni,  
+														pod izpisom, interaktivni
+														vnos za izbiro načina delovanja.}&&\\
+					\hline
+					2&Izberemo Avtomatski način&1&\small{Izpis da smo v Avtomatskem
+													načinu, izpis želenih vrednost, 
+													izpis intervalov, tabeliranje, 
+													izpis povprečne vrednosti in odstopanje.}&&\\
+					\hline
+					3&Izberemo Avtomatski način &1&\small{Pričekujemo enaki izpis kot prej.}&&\\
+					
+					\hline
+					4&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program izvede zahtevano število meritev za zahtevanega časovnega razmika ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-2& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Število meritev in\\  
+												časovni razmik.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.5cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe&&\small{Izpis da smo v Glavni meni,  
+														pod izpisom, interaktivni
+														vnos za izbiro načina delovanja.}&&\\
+					\hline
+					2&Izberemo Avtomatski način&1&\small{Izpis da smo v Avtomatskem
+													načinu, izpis želenih vrednost, 
+													izpis intervalov, tabeliranje, 
+													izpis povprečne vrednosti in odstopanje.}&&\\
+					\hline
+					3&Izberemo Avtomatski način &1&\small{Pričekujemo enaki izpis kot prej
+															in 100 meritve na vsake 3 sekunde v tabelo.}&&\\
+					
+					\hline
+					4&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program izračuna povprečno vrednost meritev ter povprečno odstopanje od želenih vrednosti za posamezne parametre ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-3& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Povprečna vrednost meritev \\  
+												in povprečno odstopanje.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.5cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe&&\small{Izpis da smo v Glavni meni,  
+														pod izpisom, interaktivni
+														vnos za izbiro načina delovanja.}&&\\
+					\hline
+					2&Izberemo Avtomatski način&1&\small{Izpis da smo v Avtomatskem
+													načinu, izpis želenih vrednost, 
+													izpis intervalov, tabeliranje, 
+													izpis povprečne vrednosti in odstopanje.}&&\\
+					\hline
+					3&Izberemo Avtomatski način &1&\small{Pričekujemo enaki izpis kot prej
+															in po tabeli izpis povprečne 
+															vrednosti in odstopanje za
+															Temp., Vlaž. in Osvetljenost.}&&\\
+					
+					\hline
+					4&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program pretvori vneseno temperaturo v ostale merske enote ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-4& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Pretvorba temperature \\  
+												v ostale merske enote.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.9cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe -t&&\small{Izpis da smo v Testni način,  
+														pod izpisom, interaktivni
+														vnos za temperaturo.}&&\\
+					\hline
+					2&Vpišemo temperaturo&300.15&\small{Izpis da je vnesena 
+														temperatura 300.15[K] in izpis
+														pretvorbe v ostale merske enote, potem
+														vnos nadaljuje kot v TP1-1 od koraka 3.}&&\\
+					\hline
+					3&Vpišemo temperaturo&308.15&\small{Izpis da je vnesena 
+														temperatura 308.15[K] in izpis
+														pretvorbe v ostale merske enote, potem
+														vnos nadaljuje kot v TP1-1 od koraka 3.}&&\\
+
+					\hline
+					4&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program izračuna razliko do želene temperature ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-5& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Izračun razlike do\\  
+											želene temperature.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.9cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe -t&&\small{Izpis da smo v Testni način,  
+														pod izpisom, interaktivni
+														vnos za temperaturo.}&&\\
+					\hline
+					2&Vpišemo temperaturo&300.15&\small{Izpis da je vnesena 
+														temperatura 300.15[K] in izpis
+														pretvorbe v ostale merske enote, potem
+														vnos nadaljuje kot v TP1-1 koraka 3 in 4 in 
+														se izpiše tabela z izračunane razlike .}&&\\
+					\hline
+					3&Vpišemo temperaturo&308.15&\small{Izpis da je vnesena 
+														temperatura 308.15[K] in izpis
+														pretvorbe v ostale merske enote, potem
+														vnos nadaljuje kot v TP1-1 koraka 3 in 4 in 
+														se izpiše tabela z izračunane razlike.}&&\\
+
+					\hline
+					4&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program pravilno izvede ukaze za regulacijo ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-6& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Ukazi za \\  
+											regulacijo temperature.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.9cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe &&\small{Izpis da smo v Glavni meni,  
+														pod izpisom, interaktivni
+														vnos za izbiro načina delovanja.}&&\\
+					\hline
+					2&Izberemo Avtomatski način&1&\small{Enako delovanje kot v primer 
+														TP2-1 korak 2 in pričekujemo 
+														ukaze za regulacijo v najbolj desnem stolpcu tabele.}&&\\
+					\hline
+					3&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program pravilno izvede ukaze za vlažnost in osvetljenost ?}
+			
+			\centering
+			
+		
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-7& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Ukazi za regulacijo\\  
+											valžnosti in osvetljenosti.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.9cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe &&\small{Izpis da smo v Glavni meni,  
+														pod izpisom, interaktivni
+														vnos za izbiro načina delovanja.}&&\\
+					\hline
+					2&Izberemo Avtomatski način&1&\small{Enako delovanje kot v primer 
+														TP2-1 korak 2 in pričekujemo 
+														ukaze za regulacijo v najbolj desnem stolpcu tabele.}&&\\
+					\hline
+					3&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+		\paragraph{Ali program prekine svoje izvajanje na zahtevo uporabnika v Testnem načinu ?}
+			
+			\centering
+			
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP2-8& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Prekinitev \\  
+											izvajanja.}& Windows 10 Pro&\thead{Preverjanje natančnost \\  
+																						 in pravilnost.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{5.9cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&Opomba za testno poročilo \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe -t &&\small{Izpis da smo v Testni način,  
+														pod izpisom, interaktivni
+														vnos za temperaturo.}&&\\
+					\hline
+					2&Vnesemo temperaturo&30&\small{Enako delovanje kot v primer 
+														TP1-1 od koraka 2 do koraka 4.}&&\\
+					\hline
+					3&Zahtevamo prekinitev izračunov&p&Izračuni in tabeliranje se prekineta.&&\\
+					\hline
+					4&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+			\paragraph{Procesiranje neveljavnih vhodnih podatkov (od TP3-1 do TP3-6).}
+			
+			\centering
+			
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primeri&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP3-1 do TP3-6& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Procesiranje \\  
+											neveljavnih podatkov.}& Windows 10 Pro&\thead{Preverjanje robustnosti \\  
+																						 vhodnih podatkov.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{10cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&OTP \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe -t &&\small{Izpis da smo v Testni način,  
+														pod izpisom, interaktivni
+														vnos za temperaturo.}&&\\
+					\hline
+					2&Vnesemo temperaturo&-120000.12&\small{Opozotilo za neveljavno vrednost 
+														temperature, potem se pojavi ponovni 
+														interaktivni vnos za temperaturo.}&&\\
+					\hline
+					3&Vnesemo vlažnost &172.8&\small{Opozotilo za neveljavno vrednost 
+														vlažnsti, potem se pojavi ponovni 
+														interaktivni vnos za vlažnost.}&&\\
+					\hline
+					4&Vnesemo osvetljenost &-127a&\small{Opozotilo za neveljavno vrednost 
+														osvetljenosti, potem se pojavi ponovni 
+														interaktivni vnos za osvetljenost.}&&\\
+					\hline
+					5&Zahtevamo prekinitev izračunov&p&Izračuni in tabeliranje se prekineta.&&\\
+					\hline
+					6&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+					7&csuppvX\_Y\_DDMMYYYY.exe&&\small{Izpis da smo v Glavni meni,  
+														pod izpisom, interaktivni
+														vnos za izbiro načina delovanja.}&&\\
+					\hline
+					8&Izberemo Avtomatski način 2&2&\small{Izpis za interaktivni vnost število
+															meritev.}&&\\
+					\hline
+					9&Vpišemo število meritev&10.23e-18&\small{Opozorilo za neveljavno vrednost
+																meritve, potem se pojavi ponovni 
+																interaktivni vnos za številio meritve.}&&\\
+					\hline
+					10&Vpišemo časovni razmik&65*87&\small{Opozorilo za neveljavno vrednost
+															razmika, potem se pojavi ponovni 
+															interaktivni vnos za časovni razmik in tabeliranje.}&&\\
+					\hline
+					11&Zahtevamo ponovno izbiro načina delovanja&¸&\small{Opozorilo za neveljavno vrednost za izbor načina 
+																		delovanja, potem se pojavi ponovni 
+																		interaktivni vnos za izbiro.}&&\\
+					\hline
+					12&Zahtevamo izhod&ž&\small{Opozorilo za neveljavno komando za izhod, potem se 
+												program vrne v prejšno stanje v kero je bil.} &&\\
+					\hline
+					13&Zahtevamo izhod&0&Okno Command Prompt
+										(odprto na lokaciji 
+										mapao programa).&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
+\newpage
+
+	\begin{landscape}
+	
+			\paragraph{Ali je program odporen na nepravilni vnos ambientalnih lastnosti v datoteki ?}
+			
+			\centering
+			
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|c|c|c|}
+			
+					\hline
+					Testni primer&Avtor&Verzija&Projekt \\
+					\hline \hline
+					TP3-7& Anton Zhezhov&V1.0&CSUPP \\
+					\hline
+
+			\end{tabular}
+			
+			\vspace{0.3cm}
+			
+			\rowcolors{1}{purple!30!}{}
+			
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Začetno stanje&Namen&Konf. sistema&Strategija&Opomba&Odvisnost od drugih testov \\
+				\hline \hline
+				\thead{Okno Command Prompt \\ 
+						(odprto na lokaciji \\
+						mapao programa).}&\thead{Procesiranje \\  
+											neveljavnih podatkov.}& Windows 10 Pro&\thead{Preverjanje robustnosti \\  
+																						 vhodnih podatkov.}&Ni opomb.&Ni nobene odvisnosti. \\
+				\hline
+			\end{tabular}
+
+			\vspace{0.3cm}
+
+			\rowcolors{1}{purple!30!}{}
+
+			\begin{tabular}{|c|c|c|C{10cm}|c|c|}
+					\hline
+					Korak&Akcija/Ime vhodne spremenjljivke&Vrednost&Pričekovana reakcija/vrednost&Opomba&OTP \\
+					\hline \hline
+					1&csuppvX\_Y\_DDMMYYYY.exe -t &&\small{Izpis da smo v Testni način,  
+														pod izpisom opozorilo da 
+														tekstovna datoteka vsebuje neveljavni tip  podatkov.}&&\\
+					\hline
+					2&csuppvX\_Y\_DDMMYYYY.exe&&\small{Izpis da smo v Glavni meni,  
+														pod izpisom, opozorilo da tekstovna datoteka vsebuje
+														neveljavni tip podatkov.}&&\\
+					\hline
+			\end{tabular}
+	\end{landscape}
+
 \end{document}
