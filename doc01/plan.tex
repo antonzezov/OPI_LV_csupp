@@ -39,7 +39,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lfoot{Powerd by \LaTeX}
-\cfoot{Verzija 1.4}
+\cfoot{Verzija 1.7}
 \rfoot{Stran: \thepage}
 
 \newcommand{\mlc}[1]{\raisebox{0ex}{\makecell{#1}}}
@@ -60,7 +60,7 @@
 
 	\vspace{1cm}
 
-	\leftline{\textbf{Začetek: 09.10.2019 } \hfill \textbf{Konec: 31.01.2020}}
+	\leftline{\textbf{Začetek: 09.10.2019 } \hfill \textbf{Konec: 07.02.2020}}
 
 	\vspace{4cm}
 
@@ -185,8 +185,6 @@
 
 \section{Plan projekta}
 
-	\subsection{Tabela}
-
 	\subsection{Kratek opis problema}
 
 		\hspace{1em} Podjetje Šaj d.o.o. (v nadaljevanju naročnik) je dne 1. 10. 2019 naročilo 
@@ -276,36 +274,82 @@
 			je podan v nadaljevanju tega dokumenta. Končni produkt 
 			predstavljajo dokumenti 0 - 6.
 
+		\subsubsection{Uporabljene preverjevalne metode}
+
 			\begin{enumerate}[label=\alph*)]
-				\item Preverjanje programa v1.0
+				
+				\item Splošni pregled vmesnih dokumentov (produkti 0 do 6, 9 ), ki niso programi 
 
-					Program v1.0 bomo preverili s pregledom izvorne kode 
-					(stil kodiranja, skladnost s standardom) in testiranjem. 
-					Pripravljeni bodo določeni testni vzorci in postopki, 
-					ki jih bo natančneje definiral dokument Testni primeri. 
-					Preverjanje izvaja preverjevalec. Po preverjanju se izpolnijo 
-					pisna poročila o najdenih neustreznostih. Na podlagi teh poročil 
-					se izvede odpravljanje neustreznosti. Najprej se bodo preverili 
-					tipični testni vzorci, če pri njih ne najdemo resne hibe, se 
-					izvedejo tudi ostali testi. Ne izvaja se nobenih regresijskih testov.
-				\item Preverjanje programa v2.0
+					\ Preverjevalec   bo   osebno   pregledal   dokument   in   sporočil   odgovorni   
+					osebi   vse   ugotovljene   nepravilnosti. O preverjanju  ne  bo  nobenega  posebnega  
+					poročila  razen  v  primeru  večjega  števila  neustreznosti. 
 
-					Program v2.0 bomo preverili s pregledom izvorne kode 
-					(stil kodiranja, skladnost s standardom) in testiranjem. Pripravljeni 
-					bodo določeni testni vzorci in postopki, ki jih bo natančneje definiral 
-					dokument Testni primeri. Preverjanje izvaja preverjevalec. Po preverjanju 
-					se izpolnijo pisna poročila o najdenih neustreznostih. Izvedejo se vsi 
-					testi (regresijsko testiranje).	
+					\ Preverjala se bo: 
+							\begin{itemize}
+								\item popolnost  
+								\item konsistentnost s predhodnimi dokumenti
+								\item skladnost dokumenta s standardom CVVS 2-2000.
+							\end{itemize}
+
+				\item Evalvacija prototipa
+
+					\ Prototip  bomo  preverili  s  pregledom  izvorne  kode  (stil  kodiranja,  
+					skladnost  s  standardom)  in  testiranjem.  Posebej  za  evalvacijo  bodo  
+					pripravljeni  določeni  testni  vzorci  in  postopki,  ki  jih  bo  natančneje  
+					definiral  dokument  Testni  primeri.  Evalvacijo  izvaja  preverjevalec,  
+					avtor  je  prisoten.  Po  evalvaciji   se   napravi   kratek   interni   
+					zapisnik.   Na   podlagi   zapisnika   se   izvede   odpravljanje   
+					neustreznosti. Ne izvaja se nobenih regresijskih testov.
+
+				\item Pregled izvorne kode (v2.0)
+
+					\ Za pregled izvorne kode bo uporabljeno orodje CCCC(C and C++ Code Counter)
+
+\newpage
+
+				\item Testiranje končnega produkta 
+
+					\ Uporabljene bodo naslednje strategije (podroben opis v prilogi):
+
+					\begin{itemize}			
+						\item prisotnost zahtev (Z)
+						\item prepovedane vrednosti - za preverjanje robustnosti (R)
+						\item mejne vrednosti (M)
+						\item ugibanje napak oziroma nepravilnosti (U)
+					\end{itemize}
+
+					\ Terminalna kriterijska funkcija. S testiranjem končamo ko sta izpolnjena pogoja a in b ali pogoj c:
+
+					\begin{enumerate}
+						\item Preveriti je potrebno prisotnost vseh zahtev, ki so podane v sistemskih specifikacijah. 
+						\item Vsaka funkcija v izvorni kodi mora biti klicana najmanj enkrat.
+						\item Ko preteče predvideno obdobje, ki je namenjeno testiranju.
+					\end{enumerate}
+
+				%\item Preverjanje programa v1.0
+
+				%	Program v1.0 bomo preverili s pregledom izvorne kode 
+				%	(stil kodiranja, skladnost s standardom) in testiranjem. 
+				%	Pripravljeni bodo določeni testni vzorci in postopki, 
+				%	ki jih bo natančneje definiral dokument Testni primeri. 
+				%	Preverjanje izvaja preverjevalec. Po preverjanju se izpolnijo 
+				%	pisna poročila o najdenih neustreznostih. Na podlagi teh poročil 
+				%	se izvede odpravljanje neustreznosti. Najprej se bodo preverili 
+				%	tipični testni vzorci, če pri njih ne najdemo resne hibe, se 
+				%	izvedejo tudi ostali testi. Ne izvaja se nobenih regresijskih testov.
+				
+				% \item Preverjanje programa v2.0
+
+				%	Program v2.0 bomo preverili s pregledom izvorne kode 
+				%	(stil kodiranja, skladnost s standardom) in testiranjem. Pripravljeni 
+				%	bodo določeni testni vzorci in postopki, ki jih bo natančneje definiral 
+				%	dokument Testni primeri. Preverjanje izvaja preverjevalec. Po preverjanju 
+				%	se izpolnijo pisna poročila o najdenih neustreznostih. Izvedejo se vsi 
+				%	testi (regresijsko testiranje).	
+			
 			\end{enumerate}
 
-			\textbf{Uporabljene bodo naslednje strategije (podroben opis v \hyperlink{subsection.1.9}{\ul{prilogi}}})
-
-				\begin{itemize}
-					\item prisotnost zahtev (Z)
-					\item prepovedane vrednosti - za preverjanje robustnosti (R)
-					\item mejne vrednosti (M)
-					\item ugibanje napak oziroma nepravilnosti (U)
-				\end{itemize}
+							
 \newpage
 
 \begin{landscape}
@@ -320,25 +364,25 @@
 				  \hline
 				  &Produkt&\makecell{Planirana \\ kompleksnost} &\makecell{Dejanska \\ kompleksnost}&\makecell{Odgovorna oseba \\ za produkt}&\raisebox{0ex}{\makecell{V\&V metoda}}&\raisebox{0ex}{\makecell{Odgovorna \\ oseba za V\&V}}&\makecell{Način sporočanja \\ o V\&V}&Opomba\\
 				\hline
-				0&\makecell{Naročnikove zahteve}&1.5 strani& &naročnik&splošni pregled&&ustno&\\
+				0&\makecell{Naročnikove zahteve}&1.5 strani&2 strani &naročnik&splošni pregled&&ustno&\\
 				\hline
-				1&Plan projekta&6 strani& &Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				1&Plan projekta&6 strani&2.5 strani &Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				2&\makecell{Sistemske specifikacije}&10 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				2&\makecell{Sistemske specifikacije}&10 strani&6 strani&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				  &Program v1.0&700 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
+				  &Program v1.0&700 LOC&/&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
 				\hline
-				3&Testni primeri&\makecell{50 testnih \\ primerov}&&Anton Zhezhov&sploš. pregled + test&Anton Zhezhov&ustno&\\
+				3&Testni primeri&\makecell{50 testnih \\ primerov}&\makecell{17 testnih \\ primerov}&Anton Zhezhov&sploš. pregled + test&Anton Zhezhov&ustno&\\
 				\hline
-				4&Testno poročilo&6 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				4&Testno poročilo&6 strani&11 strani&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				5&\makecell{Načrtovalska \\ dokumentacija}&5 strani&&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
+				5&\makecell{Načrtovalska \\ dokumentacija}&5 strani&2 strani&Anton Zhezhov&splošni pregled&Anton Zhezhov&ustno&\\
 				\hline
-				6&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&&Žiga Zorc&splošni pregled&Žiga Zorc&ustno&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
+				6&\raisebox{0ex}{\makecell{Uporabniški priročnik}}&8 strani&2 strani&Žiga Zorc&splošni pregled&Žiga Zorc&ustno&\\ %raisebox is resizeing the cell but in this case resize is set to 0 so that te cell can be colored properly.
 				\hline
-				  &Program v2.0&1300 LOC&&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
+				  &Program v2.0&1300 LOC&/&Žiga Zorc&sploš. pregled + test&Anton Zhezhov&interni zapisnik&\\
 				\hline
-				  &\raisebox{0ex}{\makecell{Kompleten \\ produkt}}&1500 LOC&&vsi&sploš. pregled + test&Naročnik&&\\
+				  &\raisebox{0ex}{\makecell{Kompleten \\ produkt}}&1500 LOC&/&vsi&sploš. pregled + test&Naročnik&&\\
 				\hline
 
 		\end{tabular}
@@ -349,30 +393,31 @@
 		\subsubsection{Rok in stršoki}
 		\vspace{3cm}
 		\begin{center}
+		\small
 		\rowcolors{1}{purple!30!}{}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 				\hline
 				&Aktivnost&Planiran rok&Dejanski rok&Planirani napor&Planirani stroški&\raisebox{0ex}{\makecell{Dejanski \\ napor}}&\raisebox{0ex}{\makecell{Dejanski \\ stroški}}&Izvajalec&\makecell{Odgovorna \\ oseba}\\
 				\hline
-				A1&\makecell{Planiranje projekta \\ in analiza zahtev}&22.10.2019&&4&400&&&&\\
+			A1&\makecell{Planiranje projekta \\ in analiza zahtev}&22.10.2019&22.10.2019&4&400&3&300&A. Zhezhov&A. Zhezhov\\
 				\hline
-			 A2&Načrtovanje&03.11.2019&&4&400&&&&\\
+			 A2&Načrtovanje&03.11.2019&03.01.2020&4&400&5&500&A. Zhezhov&A. Zhezhov\\
 				\hline
-			 A3&\makecell{Implementacija \\ programa v1.0}&03.01.2020&&4&400&&&&\\
+			 A3&\makecell{Implementacija \\ programa v1.0}&03.01.2020&03.01.2020&4&400&/&/&Ž. Zorc&A. Zhezhov\\
 				\hline
-				A4&\raisebox{0ex}{\makecell{Implementacija \\ programa v2.0}}&16.01.2020&&6&600&&&&\\
+				A4&\raisebox{0ex}{\makecell{Implementacija \\ programa v2.0}}&16.01.2020&19.01.2020&6&600&/&/&Ž. Zorc&A. Zhezhov\\
 				\hline
-			 A5&\makecell{Načrtovanje testnih \\ primerov}&03.01.2020&&2&200&&&&\\
+			 A5&\makecell{Načrtovanje testnih \\ primerov}&03.01.2020&03.01.2020&2&200&3&300&A. Zhezhov&A. Zhezhov\\
 				\hline
-			 A6&\raisebox{0ex}{\makecell{Preverjanje programa \\ v1.0}}&09.01.2020&&3&300&&&&\\
+			 A6&\raisebox{0ex}{\makecell{Preverjanje programa \\ v1.0}}&09.01.2020&02.02.2020&3&300&2&200&A. Zhezhov&A. Zhezhov\\
 				\hline
-			 A7&\makecell{Preverjanje programa \\ v2.0}&TBD&&2&200&&&&\\
+			 A7&\makecell{Preverjanje programa \\ v2.0}&09.01.2020&02.02.2020&2&200&2&200&A. Zhezhov&A. Zhezhov\\
 				\hline
-				A8&\raisebox{0ex}{\makecell{Izdelava kompletne \\ dokumentacije}}&16.01.2020&&7&700&&&&\\
+				A8&\raisebox{0ex}{\makecell{Izdelava kompletne \\ dokumentacije}}&16.01.2020&07.02.2020&7&700&7&700&A. Zhezhov&A. Zhezhov\\
 				\hline
-			A9&\makecell{Prevzem}&23.01.2020&&1&100&&&&\\
+			A9&\makecell{Prevzem}&23.01.2020&07.02.2020&1&100&1&100&Naročnik&A. Zhezhov\\
 				\hline
-			A1&\makecell{Skupaj naport - stroški}&&&&3300&&&&\\
+			A1&\makecell{Skupaj napor - stroški}&&&&3300&&2300+&&\\
 				\hline
 
 		\end{tabular}
@@ -434,7 +479,7 @@
 					\hline
 					\LaTeX &Vodenje dokumentacije\\
 					\hline
-					TBD& Merilnik kompleksnosti\\
+					CCCC& Merilnik kompleksnosti\\
 					\hline
 			\end{tabular}
 			\end{center}
@@ -454,7 +499,7 @@
 
 
 	\subsection{Razdelitev stroškov}
-		\qquad \qquad \textcolor[HTML]{C50918}{\hyperlink{subsubsection.1.4.2}{Točka 1.4.2}}
+		\qquad \qquad \textcolor[HTML]{C50918}{\hyperlink{subsubsection.1.3.2}{Točka 1.3.2}}
 
 \newpage
 
@@ -472,39 +517,39 @@
 				\hline
 				&&1&\mlc{1\\2}&2&\mlc{2\\3}&3&\mlc{3\\4}&4&\mlc{4\\5}&5&\mlc{5\\6}&6&\mlc{6\\7}&7&\mlc{7\\8}&8&\mlc{8\\9}&9&\mlc{9\\10}&10&\mlc{10\\11}&11&\mlc{11\\12}&12&\mlc{12\\13}&13&\mlc{13\\14}&14&\mlc{14\\15}&15&\\
 				\hline
-				A1&\mlc{Planiranje projekta in analiza zahtev}&+&+&+&+&+&+&+& & & & & & & & & & & & & & & & & & & & & & & \\
+				A1&\mlc{Planiranje projekta in analiza zahtev}&+*&+*&+*&+*&+*&+*&+*& *& & & & & & & & & & & & & & & & & & & & & & \\
 				\hline
-				A2&\mlc{Načrtovanje}& & & & & & & &+&+&+&+&+& & & & & & & & & & & & & & & & & & \\
+				A2&\mlc{Načrtovanje}& & & & & & & &+*&+*&+*&+*&+*&* &* & & & & & & & & & & & & & & & & \\
 				\hline
-				A3&\mlc{Implementacija programa v1.0}& & & & & & & & & & & &+&+&+&+&+&+&+&+&+&+& & & & & & & & & \\
+				A3&\mlc{Implementacija programa v1.0}& & & & & & & & & & & &+&+&+*&+*&+*&+*&+*&+*&+*&+*& & & & & & & & & \\
 				\hline
-				A4&\mlc{Implementacija programa v2.0}& & & & & & & & & & & & & & & & & & & & & &+&+&+&+&+& & & & \\
+				A4&\mlc{Implementacija programa v2.0}& & & & & & & & & & & & & & & & & & & & &* &+*&+*&+&+&+& & & & \\
 				\hline
-				A5&\mlc{Načrtovanje testnih primerov}& & & & & & & & & & &+&+&+&+& & & & & & & & & & & & & & & & \\
+				A5&\mlc{Načrtovanje testnih primerov}& & & & & & & & & & &+&+&+*&+*& *&* & & & & & & & & & & & & & & \\
 				\hline
-				A6&\mlc{Preverjanje programa v1.0}& & & & & & & & & & & &+&+&+&+&+&+&+&+&+&+& & & & & & & & & \\
+				A6&\mlc{Preverjanje programa v1.0}& & & & & & & & & & & &+&+&+&+&+*&+*&+*&+&+&+& & & & & & & & & \\
 				\hline
-				A7&\mlc{Preverjanje programa v2.0}& & & & & & & & & & & & & & & & & & & & & &+&+&+&+&+& & & & \\
+				A7&\mlc{Preverjanje programa v2.0}& & & & & & & & & & & & & & & & & & & & & &+&+*&+*&+&+& & & & \\
 				\hline
-				A8&\mlc{Izdelava kompletne dokumentacije}& & & & & & & & & & & & & & & & & & & & & & & & & & &+&+& & \\
+				A8&\mlc{Izdelava kompletne dokumentacije}& & & & & & & & & & & & & & & & & & & & & & & & & & &+&+&*& \\
 				\hline
-				A9&\mlc{Prevzem}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+& \\
+				A9&\mlc{Prevzem}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+*& \\
 				\hline
 				&Dokument (skrajni rok)&1&\mlc{1\\2}&2&\mlc{2\\3}&3&\mlc{3\\4}&4&\mlc{4\\5}&5&\mlc{5\\6}&6&\mlc{6\\7}&7&\mlc{7\\8}&8&\mlc{8\\9}&9&\mlc{9\\10}&10&\mlc{10\\11}&11&\mlc{11\\12}&12&\mlc{12\\13}&13&\mlc{13\\14}&14&\mlc{14\\15}&15&\\
 				\hline
-				A1&\mlc{Naročnikove zahteve}&+& & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+				A1&\mlc{Naročnikove zahteve}&+& & *& & & & & & & & & & & & & & & & & & & & & & & & & & & \\
 				\hline
-				A2&\mlc{Plan projekta}& & & & & & &+& & & & & & & & & & & & & & & & & & & & & & & \\
+				A2&\mlc{Plan projekta}& & & & & & &+& & & *& & & & & & & & & & & & & & & & & & & & \\
 				\hline
-				A3&\mlc{Sistemske specifikacije}& & & & & & & & &+& & & & & & & & & & & & & & & & & & & & & \\
+				A3&\mlc{Sistemske specifikacije}& & & & & & & & &+& & & & &* & & & & & & & & & & & & & & & & \\
 				\hline
-				A4&\mlc{Testni vzorci}& & & & & & & & & & & & & & & & & & & & &+& & & & & & & & & \\
+				A4&\mlc{Testni vzorci}& & & & & & & & & & & & & & & & & & & & &+& *& & & & & & & & \\
 				\hline
-				A5&\mlc{Testno poročilo}& & & & & & & & & & & & & & & & & & & & & & &+& & & & & & & \\
+				A5&\mlc{Testno poročilo}& & & & & & & & & & & & & & & & & & & & & & &+& *& & & & & & \\
 				\hline
-				A6&\mlc{Načrtovalska dokumentacija}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+& \\
+				A6&\mlc{Načrtovalska dokumentacija}& & & & & & & & & & & & & & & & & & & & & & & & & & & *& &+& \\
 				\hline
-				A7&\mlc{Uporabniški priročnik}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+& \\
+				A7&\mlc{Uporabniški priročnik}& & & & & & & & & & & & & & & & & & & & & & & & & & & & &+*& \\
 				\hline
 		\end{tabular}
 		}
@@ -1766,4 +1811,434 @@
 			\end{tabular}
 	\end{landscape}
 
+\newpage
+
+\section{Poročilo o preverjanju}
+
+	\subsection{Povzetek}
+
+	\qquad Program smo preverili v skladu s standardom CVVS 2-2000. Za testiranje 
+			programa smo uporabili testne primere opisane v točki: Testni primeri.
+
+	\subsection{Izvedene aktivnosti in ugotovitve}
+	
+		\subsubsection{Splošni pregled vmesnih dokumentov oziroma produktov}
+		
+		\subsubsection{Evalvacija prototipa}
+
+		\qquad Vse nepravilnosti prototipa glede stila kodiranja in nepravilno 
+				delovanje programa so bile ustno sporočene razvijalcu. Za testiranje
+				prototipa sta bila uporabljena testna primera TP2-2 in TP2-3.
+		
+		\subsubsection{Pregled izvorne kode}
+	
+		\qquad Informacije od programa za kompleksnost
+
+		\subsubsection{Testiranje končnega produkta}
+
+		\qquad Testiranje je potekalo na računalniku s Windows 10 Pro. Testirali smo 
+		verzijo v1.0 in v2.0 programa.
+
+		\vspace{0.5cm}
+
+		\hspace{-0.8cm} \qquad {\bf{Uporabljene strategije:}} 
+
+		\begin{itemize}
+			\item Prisotnost zahtev
+			\item Preverjanje robustnosti
+			\item Ugibanje nepravilnosti
+			\item Mejne vrednosti
+		\end{itemize}
+		
+		\hspace{-0.8cm} \qquad {\bf{Vložen napor:}}
+		
+		\vspace{0.3cm}
+
+		\qquad Glede na izbrane strategije smo uporabili 12 testnih primerov 
+				ki so opisani v točko: Testni primeri.
+
+		\vspace{0.5cm}
+
+		\hspace{-0.8cm} \qquad {\bf{Dosežena temeljitost:}}
+		
+		\vspace{0.3cm}
+
+		\qquad Planirana terminalna kriterijska funkcija.  S  testiranjem  končamo ko sta izpolnjena pogoja a in b  alipogoj c:
+
+			\begin{enumerate}[label=\alph*]
+					\item) Preveriti je potrebno prisotnost vseh zahtev, ki so podane v sistemskih specifikacijah.
+					\item) Vsaka funkcija v izvorni kodi mora biti klicana najmanj enkrat.
+					\item) Ko preteče predvideno obdobje, ki je namenjeno testiranju.
+			\end{enumerate}
+
+\newpage
+
+		\qquad Dosežena pokritost kode:
+
+			\begin{itemize}
+				\item Nepokritost zahteve za progran v1.0:
+
+				\qquad Po izračunu ni bilo mogoče izbrati ponovni vnos za keri bilo način delovanja razen Testnega načina. 
+
+				\item Nepokritost zahteve za program v2.0:
+			
+				\qquad Pri izbor Avtomatski način 2 program javi napako in se program zapre.
+			\end{itemize}
+
+
+		\vspace{0.5cm}
+
+		\hspace{-0.8cm} \qquad {\bf{Ugotovitve:}}
+		
+		\vspace{0.3cm}
+
+		\qquad V prvi verziji programa (v1.0) je bilo odkritih 7 nepravilnosti. Od tega je 
+				razvojna oseba takoj odpravila 2 nepravilnosti. Eno nepravilnost je razvojna
+				oseba predstavila za drugo verzijo programa (v2.0). 
+
+		\qquad	Zaradi opravičenih razlogov razvojna oseba ni uspela do konca odpraviti napake 
+		iz prve verzije programa (v1.0) in se je odločila da več ne bo sodelovala v projektu. 
+		To ima vpliv na drugo verzijo programa in to pomeni da druga verzija programa ni dokončana.
+
+\newpage
+
+	\begin{landscape}
+
+	\subsection{Poročilo o najdenih nepravilnostih}
+
+		\centering
+
+			\rowcolors{1}{purple!30!}{}
+			\begin{tabular}{|c|C{3cm}|C{8cm}|c|c|c|c|}
+				
+					\hline
+					Nepravilnost & Testni primer & Opis nepravilnosti & Resnost & Verzija & Končni status & Opomba \\
+					\hline
+					1/1&TP2-1&Ni omogočen ponovni izbir načina delovanja& 2 & v1.0 & Odpravljeno v v2.0& \\
+					\hline
+					1/2&TP3-1 - TP3-6 
+						Korak 1 - 6&Neskončna zanka pri neveljavni vnos& 3 & v1.0 & Ni odpravljeno& \\
+					\hline
+					1/3&TP2-4&Ne zaznava enot temperature iz datoteke & 3 & v1.0 & Ni odpravljeno& \\
+					\hline
+					1/4&TP2-2&Čas. razmik med meritvami je manj kot 3s& 2 & v1.0 & Odpravljeno v v2.0& \\
+					\hline
+					1/5&TP3-5&Ne dobimo upozorilo za max. ali min. število 
+								meritev ali max. ali min čas. razmik& 2 & v1.0 & Ni odpravljeno& \\
+					\hline
+					1/6&TP3-1 - TP3-6  
+						Korak 8 - 10&Nepričekovan izpis za nepravilne vnose
+								v Avtomatskem načinu 2& 3 & v1.0 & Ni odpravljeno& \\
+					\hline
+					1/7&TP3-1 - TP3-6
+						Korak 12&Ni upozorila za nepravilni vnos,
+								ponovni vnos pa je omogočen& 1 & v1.0 & Ni odpravljeno& \\
+					\hline
+					2/1&TP2-1&Program javi Debug Error pri izbiri Avtomatskega načina 2 & 3 & v2.0 & Ni odpravljeno& \\
+					\hline
+					2/2&TP2-4&Ne zaznava enot temperature iz datoteke& 3 & v2.0 & Ni odpravljeno& \\
+					\hline
+					2/3&TP3-1 - TP3-6
+						Korak 1 - 6&Neskončna zanka pri neveljavni vnos& 3 & v2.0 & Ni odpravljeno& \\
+					\hline
+			\end{tabular}
+
+	\end{landscape}
+
+\newpage
+
+	\subsection{Priloge}
+
+	\quad Poročila o neustreznosti.
+{
+	\centering
+
+	\vspace{2cm}
+
+	\includegraphics[width=15cm]{porocila/01.jpg}
+
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+
+	\includegraphics[width=15cm]{porocila/02.jpg}
+
+\newpage
+
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/03.jpg}
+	
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/04.jpg}
+	
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/05.jpg}
+	
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/06.jpg}
+	
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/07.jpg}
+	
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/08.jpg}
+	
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/09.jpg}
+	
+\newpage
+	
+	\hspace{2cm}
+
+	\vspace{2cm}
+	
+	\includegraphics[width=15cm]{porocila/10.jpg}
+
+}
+
+\newpage
+
+	\subsection{Podatki o kompleksnosti}
+
+	\qquad Dobim napako pri uporabi programa CCCC na Windows 10 in v Linux.
+
+	\vspace{2cm}
+
+	{
+
+	\centering
+
+	\includegraphics[width=14cm]{diagrami_slike/napaka_cccc.png}
+
+	}
+
+
+%\begin{comment}
+
+\newpage
+
+	\section{Načrtovalska dokumentacija}
+
+		\subsection{Povzetek iz specifikacij}
+
+			\subsubsection{Kontekstni nivo}
+
+			{
+
+			\centering
+
+			\includegraphics[width=8.5cm]{diagrami_slike/kont_nivo.png}
+
+			}
+
+			\subsubsection{Datoteke ki ih uporablja uporabnik}
+
+			\qquad Uporabnik za delovanje programa potrebuje naslednje datoteke:
+
+			\begin{itemize}
+
+				\item csuppvX\_Y\_DD\_MM\_YYYY.exe (izvršljiva verzija programa)
+
+				\item csupp\_config.txt (datoteka ki vsebuje ambientalne lasnosti in jo uporabnik spreminja po potrebi)
+
+				\item readme.txt (besedilo vgrajene pomoči)
+
+			\end{itemize}
+
+			\subsubsection{Zagon programa}
+
+			\qquad Program  zaženemo iz CMD tako da se moramo nahajati v datoteki programa, vtipkamo ime programama: 
+			csuppvX\_Y\_DD\_MM\_YYYY.exe in pritisnemo Enter. Zaženemo  ga  lahko  tudi  iz  okenskega raziskovalca 
+			z dvoklikom na njegovo ikono ali bližnjico. 
+
+			\subsubsection{Datoteke ki jih potrebuje vzdrževalec}
+
+			\begin{itemize}
+
+				\item prijektna dokumentacija plan.pdf 
+				\item csuppvX\_Y\_DD\_MM\_YYYY.cpp 
+				\item functions.cpp
+				\item functions.h
+				\item csupp\_config.txt
+				\item readme.txt
+
+			\end{itemize}
+
+
+		\subsection{Strukturni diagram}
+
+		\qquad Kot tester bi potreboval konsultacije z razvajalcem za to točko.
+
+		\subsection{Seznam modulov in podatkovnih tokov}
+		
+		\qquad Kot tester bi potreboval konsultacije z razvajalcem za to točko.
+		
+		\subsection{Opsi posameznih modulov}
+		
+		\qquad Kot tester bi potreboval konsultacije z razvajalcem za to točko.
+
+		\subsection{Najpomembnejši parametri in opisi podatkovnih struktur}
+			
+			\subsubsection{Struktura datoteke csupp\_config.txt}
+
+			\quad V tej datoteki uporabni ne-interaktivno vnese želene vrednosti za parametre.
+			Datoteka vsebuje 6 vrstic, v vsako vrstico je napisano keri parameter ta vrstica predstavlja 
+			in po dvopičju se zapišejo želene vrednosti. Primer formata:
+
+			\quad PARAMETER: ŠTEVILO
+
+			\quad TEMPERATURA: 25
+			
+			\quad PARAMETER: [ŠTEVILO, ŠTEVILO]
+			
+			\quad INTERVAL OSVETLJENOSTI: [4000, 7600]
+
+			\subsubsection{Struktura datoteke readme.txt}
+
+			\quad Datoteka vsebuje opis ukazov ki se izvajajo v procesu izračunov oz. tabeliranja. Format:
+
+			\quad Oznaka ukaza - Opis oznake ukaza.
+
+			\quad T2 - Izklopi grelec
+
+			\quad V1 - Vklopi vlazilec
+
+			\quad 03 - Izklopi luci
+
+			\subsubsection{Parametri pri zagonu programa}
+
+			\quad Ob  zagonu  pozna  program  en  sam  vhodni  parameter.  To  je  '-t'  (brez  narekovajev).  
+			Služi  vklopu  testnega režima delovanja. Ko program poženemo s tem parametrom, ostane v testnem 
+			režimu delovanja do naslednjega zagona.
+
+		\subsection{Natančna identifikacija uporabljenih orodij in knjižnic}
+
+			\begin{itemize}
+
+				\item Za pisanje in prevajanje kode je bil uporabljan program 'Microsoft Visual Studio 2019'.
+				\item Za pisanje dokuemntacije je bil uporaben pogram 'vim' za pisanje in urejanje tekstovne datoteke.
+				\item Za pretvorbo tekstovne datoteke v PDF formatu je bil uporabljen program 'vim-live-latex-preview'.
+				\item Za izdelavo csuppv\_config.txt in readme.txt  datotek je bil uporabljen standardni program 'Microsoft Notepad'.
+
+			\end{itemize}
+
+		\subsection{Postopek potreben za ustvarjanje izvršilne kode}
+
+			\qquad Kot tester bi potreboval konsultacije z razvajalcem za to točko.
+
+%\end{comment}
+
+\newpage
+
+	{
+	\centering
+
+	\hspace{0cm}
+
+	\vspace{4cm}
+
+	{\large{Program}}
+
+	\vspace{1cm}
+
+	{\bf{\Huge{Centralni sistem za upravljanje poslovnega prostora}}}
+
+	\vspace{0.5cm}
+
+	{(verzija 2.0)}
+	
+	\vspace{1.5cm}
+
+	{\bf{\Large{Uporabniški priročnik}}}
+
+	{
+	\color{white} \section{Blank white}
+	}
+	}
+
+\newpage
+
+	\subsection{Namen}
+
+	\quad Program je izdelan kot simulator in ima za namen krmiljenje temperature, vlage in osvetljenosti v prostoru.
+
+	\subsection{Strojne in programske zahteve}
+
+	\quad Program dela v okolju Windows, nima gafičnega vmesnika, deluje kot konzolna aplikacija oz. lahko deluje
+	tudi na starejše računalnike z starejšo verzijo okolja Windows.
+
+	\subsection{Namestitev in zagon programa}
+
+	\quad Program je v mapo z dvema datotekama (csupp\_config.txt in readme.txt) ki sta pomembni za delovanje programa.
+	V datoteko csupp\_config.txt so že nastavljeni parametri kot primer, uporabnik ih lahko spreminja po svojo željo.
+	
+	\hspace{-0.8cm} \quad Program zaženemo z dvoklikom na ikono programa csuppvX\_Y\_DD\_MM\_YYYY.exe ali pa preko CMD okolja se predstavimo
+	v mapo v kero se nahaja program in ga zaženemo z komando: \\ ./csuppvX\_Y\_DD\_MM\_YYYY.exe .
+
+	\hspace{-0.8cm} \quad Preko okolja CMD lahko tudi zaženemo program z argumentom '-t':\\ ./csuppvX\_Y\_DD\_MM\_YYYY.exe -t .
+	Tako pridemo v testnem načinu delovanja programa ki je namenjen testerju ali razvijalcu za preizkus programa, ne pa uporabniku.
+
+	\subsection{Navodilo za uporabo}
+
+	\subsubsection{Glavni meni}
+
+	\quad Ko program zaženemo se prikaže Glavni meni ki ponuja 4 izbire: Izhod, Avtomatski način, Avtomatski način 2 in Pomoč. Želeno funkcijo 
+	programa izberemo tako da vpišemo številko ali znak pred funkcijo ki jo želimo.
+
+	\subsubsection{Izhod}
+
+	\quad Če želimo izhod iz programa vtipkamo '0' (nulo) in pritisnemo Enter in se program zapre.
+
+	\subsubsection{Avtomatski način}
+
+	\quad Za izbiro tega načina vtipkamo 1 (ena) in pritisnemo Enter, program si sam izmisli in izpiše izmisljene vrednosti in začne
+	izvajati izračune, tabeliranje in ukaze za regulacijo na vsake 3 sekunde za 100 meritve. Na koncu izračunov izpiše še
+	povrpečne vrednosti parametrov in odstopanje.
+
+	\subsubsection{Avtomatski način 2}
+
+	\quad Ta način izberemo če vtipkamo 2 (dve) in pritisnemo Enter, dobimo mogočnost za dva vnosa in sicer število meritev in
+	razmik med njimi. Vnesemo število meritev kot celo števolo in pritisnemo Enter, vnesemo še želen čas kot celo število v milisekundah
+	in pritisnemo Enter. Program začne izvajati izračune, tabeliranje in ukaze za regulacijo in na koncu izpiše povprečne vrednosti in 
+	odstopanja glede naše zelene vrednosti v datoteki.
+	
+	\subsubsection{Pomoč}
+
+	\quad Če izberemo znak + se izpiše pomoč za uporabo programa in opis ukazov ki se izvajajo. Lahko poiščemo pomoč vsakič ko
+	nam je ponujen interaktivni vnos v programu oz. v vsakem načinu delovanja programa.
 \end{document}
